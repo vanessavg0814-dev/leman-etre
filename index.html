@@ -588,7 +588,7 @@
     .frame-lake::before {
       background:
         linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,0.28) 100%),
-        url("chateau_ivy_couple.png") center/cover no-repeat,
+        url("leman_etre_destination_media_package/leman_assets/chateau_ivy_couple.png") center/cover no-repeat,
         #f2efe8;
       filter: grayscale(1) contrast(1.05) brightness(1.02);
     }
@@ -596,7 +596,7 @@
     .frame-table::before {
       background:
         linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.32) 100%),
-        url("friends_picnic_wide.jpg") center/cover no-repeat,
+        url("leman_etre_destination_media_package/leman_assets/friends_picnic_wide.jpg") center/cover no-repeat,
         #f2efe8;
       filter: grayscale(1) contrast(1.05) brightness(1.02);
     }
@@ -604,7 +604,7 @@
     .frame-note::before {
       background:
         linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,0.30) 100%),
-        url("louvre_statues.jpg") center/cover no-repeat,
+        url("leman_etre_destination_media_package/leman_assets/louvre_statues.jpg") center/cover no-repeat,
         #f2efe8;
       filter: grayscale(1) contrast(1.05) brightness(1.02);
     }
@@ -655,21 +655,7 @@
       margin-right: auto !important;
     }
     .hero .hero-line { margin-top: clamp(1.6rem, 3vw, 2.8rem) !important; }
-    /* --- Scroll hint: hard-centered horizontally, vertical-only pulse --- */
-    .hero .scroll-hint {
-      position: absolute !important;
-      left: 0 !important;
-      right: 0 !important;
-      bottom: clamp(1.4rem, 3vw, 2rem) !important;
-      transform: none !important;
-      text-align: center !important;
-      margin: 0 auto !important;
-      animation-name: pulseHintV !important;
-    }
-    @keyframes pulseHintV {
-      0%, 100% { opacity: .28; transform: translateY(0); }
-      50%     { opacity: .78; transform: translateY(.35rem); }
-    }
+    .hero .scroll-hint { position: absolute; bottom: clamp(1.4rem, 3vw, 2rem); left: 50%; transform: translateX(-50%); }
 
     /* ---- Hide the destination section's decorative white placeholder frames ---- */
     .destination-setting-frame { display: none !important; }
@@ -1807,9 +1793,9 @@
   <main id="top">
     <section class="panel hero dark" data-scene="">
       <div class="panel-media" aria-hidden="true">
-        <video src="IMG_3335_3_trim.mp4"
+        <video src="leman_etre_destination_media_package/leman_assets/IMG_3335_3_trim.mp4"
                autoplay muted loop playsinline preload="metadata"
-               poster="IMG_3335_3_trim_preview.jpg"></video>
+               poster="leman_etre_destination_media_package/leman_assets/IMG_3335_3_trim_preview.jpg"></video>
       </div>
       <canvas class="water-canvas" data-water-canvas="hero" aria-hidden="true"></canvas>
       <div class="hero-copy reveal">
@@ -1837,15 +1823,15 @@
         </div>
         <div class="two-image-stack">
           <div class="two-image-frame two-image-landscape reveal">
-            <img src="tux_lounge_wide.png" alt="A tux and a silver-satin dress on a velvet banquette — a candle, a champagne bucket, Gatsby bottles on a low table">
+            <img src="leman_etre_destination_media_package/leman_assets/tux_lounge_wide.png" alt="A tux and a silver-satin dress on a velvet banquette — a candle, a champagne bucket, Gatsby bottles on a low table">
           </div>
           <div class="two-image-frame two-image-portrait reveal">
-            <img src="rooftop_nyc.jpg" alt="Two friends on a downtown parapet at golden hour — a coupe raised, a glance held mid-conversation">
+            <img src="leman_etre_destination_media_package/leman_assets/rooftop_nyc.jpg" alt="Two friends on a downtown parapet at golden hour — a coupe raised, a glance held mid-conversation">
           </div>
           <div class="two-image-frame two-image-square reveal">
-            <video src="picnic_video.mp4"
+            <video src="leman_etre_destination_media_package/leman_assets/picnic_video.mp4"
                    autoplay muted loop playsinline preload="metadata"
-                   poster="picnic_video_preview.jpg"
+                   poster="leman_etre_destination_media_package/leman_assets/picnic_video_preview.jpg"
                    aria-label="A wine bar from above — records, bottles on lit shelves, dinner at the counter"></video>
           </div>
         </div>
@@ -1855,9 +1841,9 @@
     <!-- Chapter II · B — We believe curiosity is contagious. (Bourse dome, landscape crop) -->
     <section class="panel dark" data-scene="">
       <div class="panel-media" aria-hidden="true">
-        <video src="curiosity_dome_wide.mp4"
+        <video src="leman_etre_destination_media_package/leman_assets/curiosity_dome_wide.mp4"
                autoplay muted loop playsinline preload="metadata"
-               poster="curiosity_dome_wide_preview.jpg"></video>
+               poster="leman_etre_destination_media_package/leman_assets/curiosity_dome_wide_preview.jpg"></video>
       </div>
       <div class="manifesto-block reveal" style="text-align:center;">
         <p class="manifesto-line medium italic cinematic slow-emerge" data-content-key="manifesto.lines.4" data-split="chars">We believe curiosity is contagious.</p>
@@ -1898,9 +1884,9 @@
 
     <section class="panel destination dark" data-scene="" id="destination" data-chapter="IV">
       <div class="panel-media" aria-hidden="true">
-        <video src="boats_video.mp4"
+        <video src="leman_etre_destination_media_package/leman_assets/boats_video.mp4"
                autoplay muted loop playsinline preload="metadata"
-               poster="boats_video_preview.jpg"></video>
+               poster="leman_etre_destination_media_package/leman_assets/boats_video_preview.jpg"></video>
       </div>
       <canvas class="water-canvas" data-water-canvas="destination" data-visual-feature="destinationCanvas" aria-hidden="true"></canvas>
       <div class="destination-stage">
@@ -1925,7 +1911,7 @@
 
     <section class="panel dark chapter-pool" data-scene="" data-chapter="V">
       <div class="panel-media" aria-hidden="true">
-        <img src="pool_dive_wide.png" alt="Cypress-lined pool at a hillside estate — a tux at the edge, a woman standing by the steps, a figure caught mid-dive">
+        <img src="leman_etre_destination_media_package/leman_assets/pool_dive_wide.png" alt="Cypress-lined pool at a hillside estate — a tux at the edge, a woman standing by the steps, a figure caught mid-dive">
       </div>
       <div class="manifesto-block right reveal">
         <p class="eyebrow">V</p>
@@ -1946,9 +1932,9 @@
     <!-- Chapter VI, part B — Leisure as the space where curiosity, culture, and human connection flourish. (loafers video bg) -->
     <section class="panel paper" data-scene="">
       <div class="panel-media" aria-hidden="true">
-        <video src="candid_c.mp4"
+        <video src="leman_etre_destination_media_package/leman_assets/candid_c.mp4"
                autoplay muted loop playsinline preload="metadata"
-               poster="candid_c_preview.jpg"></video>
+               poster="leman_etre_destination_media_package/leman_assets/candid_c_preview.jpg"></video>
       </div>
       <div class="manifesto-block reveal">
         <p class="manifesto-line small cinematic soft-words" data-content-key="manifesto.lines.18" data-split="words">Leisure as the space where curiosity, culture, and human connection flourish.</p>
