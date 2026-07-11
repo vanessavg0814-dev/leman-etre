@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en" class="no-js"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LÉMAN ÊTRE — the people. Founders, hosts, and cultural minds whose evenings the House is built from.">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="index, follow">
+  <meta property="og:site_name" content="LÉMAN ÊTRE">
+  <meta property="og:title" content="LÉMAN ÊTRE · The People">
+  <meta property="og:description" content="The people who set the room — founders, hosts, and cultural minds behind LÉMAN ÊTRE.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lemanetre.com/people">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LÉMAN ÊTRE · The People">
+  <meta name="twitter:description" content="The people who set the room — founders, hosts, and cultural minds behind LÉMAN ÊTRE.">
+  <title>LÉMAN ÊTRE · The People</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&amp;family=Newsreader:opsz,wght@6..72,300..500&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #000;
+      --paper: #ffffff;
+      --muted-ink: rgba(0, 0, 0, 0.64);
+      --line: rgba(0, 0, 0, 0.16);
+      --wash: rgba(0, 0, 0, 0.035);
+      --grain-opacity: .028;
+      --vignette-opacity: .12;
+      --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+      --sans: "Hanken Grotesk", Inter, ui-sans-serif, system-ui, sans-serif;
+      --brand-serif: 'Times New Roman', Times, serif;
+      --ease-silk: cubic-bezier(.16, 1, .3, 1);
+      --body-scale: 0.9;
+      --reveal-y: 2rem;
+      --reveal-blur: 16px;
+    }
+    * { box-sizing: border-box; }
+    html {
+      scroll-behavior: smooth;
+      background: var(--paper);
+      font-size: calc(100% * var(--body-scale));
+    }
+    html.no-js .reveal {
+      opacity: 1 !important;
+      transform: none !important;
+      filter: none !important;
+    }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--sans);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    body::selection { background: rgba(0,0,0,.14); }
+    a { color: inherit; text-decoration: none; }
+
+    /* Atmosphere layers — same as home */
+    .grain, .vignette {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+    }
+    .grain {
+      z-index: 70;
+      opacity: var(--grain-opacity);
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.84' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.66'/%3E%3C/svg%3E");
+      mix-blend-mode: multiply;
+    }
+    .vignette {
+      z-index: 60;
+      background:
+        radial-gradient(circle at 50% 40%, rgba(255,255,255,0) 0 46%, rgba(0,0,0,.05) 78%, rgba(0,0,0,.11) 100%),
+        linear-gradient(180deg, rgba(0,0,0,.055), rgba(0,0,0,0) 24%, rgba(0,0,0,.045));
+      opacity: var(--vignette-opacity);
+      mix-blend-mode: multiply;
+    }
+
+    /* Reveal transitions — same as home */
+    .reveal {
+      opacity: 0;
+      transform: translate3d(0, var(--reveal-y), 0);
+      filter: blur(var(--reveal-blur));
+      transition:
+        opacity 1.3s var(--ease-silk),
+        transform 1.3s var(--ease-silk),
+        filter 1.3s var(--ease-silk);
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      filter: blur(0);
+    }
+    .reveal.stagger-2 { transition-delay: .12s; }
+    .reveal.stagger-3 { transition-delay: .24s; }
+
+    /* Header */
+    .site-header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 85;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: clamp(1.1rem, 2vw, 2rem);
+      color: var(--ink);
+      pointer-events: none;
+    }
+    .site-header a { pointer-events: auto; }
+    .brand {
+      font-family: var(--brand-serif) !important;
+      letter-spacing: .22em;
+      font-size: clamp(0.95rem, 1.15vw, 1.15rem);
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(.7rem, 1.2vw, 1.1rem);
+    }
+    .site-nav a {
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-size: clamp(0.7rem, 0.82vw, 0.85rem);
+      font-weight: 500;
+      color: var(--ink);
+      opacity: .78;
+      transition: opacity .35s var(--ease-silk);
+    }
+    .site-nav a:hover { opacity: 1; }
+    .site-nav .divider {
+      opacity: .32;
+      font-size: .68rem;
+      letter-spacing: 0;
+    }
+
+    /* Base type patterns */
+    .eyebrow {
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: .32em;
+      font-size: clamp(.72rem, .92vw, .92rem);
+      font-weight: 500;
+      color: var(--muted-ink);
+      margin: 0 0 clamp(1.4rem, 2.6vw, 2.4rem);
+    }
+    .serif-headline {
+      font-family: var(--serif);
+      font-weight: 330;
+      line-height: 1.02;
+      letter-spacing: -.032em;
+      text-wrap: balance;
+      margin: 0;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 80svh;
+      display: grid;
+      place-items: center;
+      padding: clamp(7rem, 12vw, 10rem) clamp(1.5rem, 6vw, 6rem) clamp(4rem, 7vw, 6rem);
+      text-align: center;
+    }
+    .hero-inner {
+      max-width: min(880px, 92vw);
+    }
+    .hero-title {
+      font-size: clamp(1.9rem, 5.2vw, 4.5rem);
+    }
+    .hero-lede {
+      margin: clamp(1.8rem, 3.4vw, 2.8rem) auto 0;
+      font-family: var(--serif);
+      font-size: clamp(1rem, 1.6vw, 1.35rem);
+      font-weight: 330;
+      line-height: 1.5;
+      letter-spacing: -.008em;
+      color: var(--muted-ink);
+      max-width: min(560px, 88vw);
+      text-wrap: balance;
+    }
+
+    /* Community section (repeatable) */
+    .community-section {
+      padding: clamp(3.4rem, 6vw, 6rem) clamp(1.5rem, 6vw, 6rem);
+      border-top: 1px solid var(--line);
+    }
+    .community-inner {
+      max-width: min(960px, 100%);
+      margin: 0 auto;
+    }
+    .section-eyebrow {
+      font-family: var(--sans);
+      text-transform: lowercase;
+      letter-spacing: .18em;
+      font-size: clamp(.78rem, .98vw, .98rem);
+      font-weight: 500;
+      color: var(--ink);
+      margin: 0 0 clamp(.5rem, .8vw, .8rem);
+    }
+    .section-subline {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 1.7vw, 1.55rem);
+      font-weight: 330;
+      font-style: italic;
+      line-height: 1.4;
+      color: var(--muted-ink);
+      margin: 0 0 clamp(2rem, 4vw, 3.2rem);
+      max-width: min(520px, 90%);
+    }
+
+    /* Member grid + card — no more monograms */
+    .members-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(2rem, 3.4vw, 3rem) clamp(2rem, 4vw, 3.8rem);
+    }
+    @media (max-width: 720px) {
+      .members-grid { grid-template-columns: 1fr; }
+    }
+    .member-card {
+      display: block;
+    }
+    .member-name {
+      font-family: var(--serif);
+      font-size: clamp(1.15rem, 1.7vw, 1.45rem);
+      font-weight: 330;
+      letter-spacing: -.018em;
+      line-height: 1.1;
+      margin: 0 0 .3rem;
+      color: var(--ink);
+    }
+    .member-role {
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-size: clamp(.62rem, .78vw, .72rem);
+      font-weight: 500;
+      color: var(--muted-ink);
+      margin: 0 0 .8rem;
+    }
+    .member-bio {
+      font-family: var(--serif);
+      font-size: clamp(.92rem, 1.15vw, 1.05rem);
+      font-weight: 330;
+      line-height: 1.5;
+      letter-spacing: -.004em;
+      color: var(--ink);
+      margin: 0;
+      opacity: .86;
+    }
+    .member-note {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(.85rem, 1vw, .95rem);
+      color: var(--muted-ink);
+      margin: 0;
+    }
+
+    /* The open table (community invitation) */
+    .open-table {
+      background: var(--paper);
+      text-align: center;
+      padding-block: clamp(5rem, 8vw, 7rem);
+    }
+    .open-table .community-inner { max-width: min(700px, 92vw); }
+    .open-table-lede {
+      font-family: var(--serif);
+      font-size: clamp(1.25rem, 2.6vw, 2.15rem);
+      font-weight: 330;
+      line-height: 1.35;
+      letter-spacing: -.014em;
+      color: var(--ink);
+      margin: 0 0 clamp(2rem, 4vw, 3rem);
+      text-wrap: balance;
+    }
+    .open-table-lede em {
+      font-style: italic;
+      color: var(--muted-ink);
+    }
+
+    /* Founding Members */
+    .founding {
+      background:
+        radial-gradient(circle at 50% 34%, rgba(0,0,0,.05), rgba(0,0,0,0) 32rem),
+        var(--paper);
+      text-align: center;
+      padding-block: clamp(6rem, 10vw, 8rem);
+      border-top: 1px solid var(--line);
+    }
+    .founding .community-inner { max-width: min(720px, 92vw); }
+    .founding-title {
+      font-size: clamp(1.7rem, 4.6vw, 3.6rem);
+      font-style: italic;
+      color: var(--ink);
+      margin: 0 0 clamp(1.6rem, 2.8vw, 2.3rem);
+    }
+    .founding-body {
+      font-family: var(--serif);
+      font-size: clamp(.98rem, 1.5vw, 1.3rem);
+      font-weight: 330;
+      line-height: 1.5;
+      letter-spacing: -.008em;
+      color: var(--ink);
+      opacity: .88;
+      margin: 0 0 clamp(1.2rem, 2.2vw, 1.8rem);
+    }
+    .founding-subline {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(.88rem, 1.15vw, 1.05rem);
+      line-height: 1.5;
+      color: var(--muted-ink);
+      margin: 0 0 clamp(2.5rem, 4.4vw, 3.4rem);
+    }
+
+    /* CTA button */
+    .cta {
+      display: inline-block;
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: .28em;
+      font-size: clamp(.7rem, .95vw, .85rem);
+      font-weight: 600;
+      padding: .95rem 1.9rem;
+      border: 1px solid rgba(0,0,0,.34);
+      color: var(--ink);
+      transition:
+        background .35s var(--ease-silk),
+        color .35s var(--ease-silk),
+        border-color .35s var(--ease-silk),
+        letter-spacing .35s var(--ease-silk),
+        transform .35s var(--ease-silk);
+    }
+    .cta:hover, .cta:focus-visible {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+      letter-spacing: .34em;
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    .site-footer {
+      padding: clamp(3rem, 5vw, 4.5rem) clamp(1.5rem, 6vw, 6rem);
+      text-align: center;
+      border-top: 1px solid var(--line);
+    }
+    .site-footer a {
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: .22em;
+      font-size: clamp(.68rem, .85vw, .78rem);
+      font-weight: 500;
+      color: var(--muted-ink);
+      transition: color .35s var(--ease-silk);
+    }
+    .site-footer a:hover { color: var(--ink); }
+
+    @media (max-width: 720px) {
+      .site-header { padding: 1rem; }
+      .site-nav .divider { display: none; }
+      .members-grid { gap: 2.2rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1 !important; transform: none !important; filter: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="site-header" aria-label="LÉMAN ÊTRE">
+    <a class="brand" href="/" aria-label="LÉMAN ÊTRE home">LÉMAN ÊTRE</a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="/">Home</a>
+      <span class="divider" aria-hidden="true">·</span>
+      <a href="/#subscribe">Subscribe</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow reveal">The People</p>
+        <h1 class="serif-headline hero-title reveal stagger-2">The people who set the room.</h1>
+        <p class="hero-lede reveal stagger-3">The manifesto tells you what LÉMAN ÊTRE believes. What follows tells you who does — a small circle of founders, hosts, and cultural minds whose evenings the House is built from.</p>
+      </div>
+    </section>
+
+    <section class="community-section" aria-label="The Founding">
+      <div class="community-inner">
+        <h2 class="section-eyebrow reveal">The Founding</h2>
+        <p class="section-subline reveal stagger-2">Two behind the invitation.</p>
+        <div class="members-grid">
+          <article class="member-card reveal">
+            <h3 class="member-name">Vanessa Schlauri</h3>
+            <p class="member-role">Founder · Switzerland</p>
+            <p class="member-bio">LÉMAN ÊTRE began as the room she wanted to be in — one where curiosity, culture, and human connection were the finest company. A Swiss entrepreneur working across longevity, wellness, and hospitality, she now runs it as her life's work.</p>
+          </article>
+          <article class="member-card reveal stagger-2">
+            <h3 class="member-name">Manuel Riegner</h3>
+            <p class="member-role">Co-founder & Medical Advisor · Switzerland</p>
+            <p class="member-bio">Zurich-based founder of the Surf Your Life Institute — a transdisciplinary program for synchronising the body's rhythms with a modern life, and a training academy for physicians and coaches. Manuel writes on longevity capital and the physician-as-coach model, and lends the House its clinical calm.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="community-section" aria-label="Where we gather">
+      <div class="community-inner">
+        <h2 class="section-eyebrow reveal">Where we gather</h2>
+        <p class="section-subline reveal stagger-2">A partner in each city we open.</p>
+        <div class="members-grid">
+          <article class="member-card reveal">
+            <h3 class="member-name">Reza Kazemipour</h3>
+            <p class="member-role">Partner · California</p>
+            <p class="member-bio">Two decades across venture, mergers, and the boardroom — currently CEO of Sixth Ring, the first generative-AI wellness platform trained on Olympic performance data. In California, Reza sets the room.</p>
+          </article>
+          <article class="member-card reveal stagger-2">
+            <h3 class="member-name">Laura Fontaine</h3>
+            <p class="member-role">Partner · Dubai</p>
+            <p class="member-bio">Dubai-based mind-body practitioner and Regional Director at Longevity Wellness Hub — MENA's first holistic wellness hub. Laura hosts LÉMAN ÊTRE in Dubai, where the next chapter of the House opens in November 2026.</p>
+          </article>
+          <article class="member-card reveal stagger-3">
+            <h3 class="member-name">Katie Kerins</h3>
+            <p class="member-role">Partner · Dubai</p>
+            <p class="member-bio">Dubai-based founder of Mujo, a women-first creatine wellness house, and co-founder of Yoke Communications, the Business Bay creative agency. Katie co-hosts the Dubai table alongside Laura.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="community-section" aria-label="Medical counsel">
+      <div class="community-inner">
+        <h2 class="section-eyebrow reveal">Medical counsel</h2>
+        <p class="section-subline reveal stagger-2">The clinicians who quiet the room.</p>
+        <div class="members-grid">
+          <article class="member-card reveal">
+            <h3 class="member-name">Manuel Riegner</h3>
+            <p class="member-role">Medical Advisor · Switzerland</p>
+            <p class="member-note">See The Founding, above.</p>
+          </article>
+          <article class="member-card reveal stagger-2">
+            <h3 class="member-name">Dr. Jacques Durand</h3>
+            <p class="member-role">Medical Advisor · Paris</p>
+            <p class="member-bio">Paris-based physician turned knowledge entrepreneur — founder of Longevity 960 and host of the Digital Fashion and AI Movie Awards at Cannes. Dr. Durand's practice threads through immersive tech, expedition science, and the quieter craft of wellbeing.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="community-section open-table" aria-label="The open table">
+      <div class="community-inner">
+        <h2 class="section-eyebrow reveal">The open table</h2>
+        <p class="open-table-lede reveal stagger-2">The people grow by hearth. <em>If you are a founder, a family principal, a philanthropist, an artist, a filmmaker, a chef, a curator, an architect, a physician, or an athlete of quiet discipline — and something in the manifesto found you — write to us.</em></p>
+        <div class="reveal stagger-3">
+          <a class="cta" href="mailto:hello@lemanetre.com?subject=Application%20%E2%80%94%20L%C3%89MAN%20%C3%8ATRE%20Community">Write to LÉMAN ÊTRE →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="founding" aria-label="Founding Members">
+      <div class="community-inner">
+        <p class="eyebrow reveal">Founding Members</p>
+        <h2 class="serif-headline founding-title reveal stagger-2">The first fifty at the table.</h2>
+        <p class="founding-body reveal stagger-3">LÉMAN ÊTRE's people grow one conversation at a time. The first fifty to sit at the table become Founding Members — a designation held for life. First invitation to every gathering. A permanent place in the Founding room. Direct correspondence with the founding circle.</p>
+        <p class="founding-subline reveal stagger-3">By invitation and by application. Founding Members become part of the House through inaugural contribution — the form of which is discussed personally.</p>
+        <div class="reveal stagger-3">
+          <a class="cta" href="mailto:hello@lemanetre.com?subject=Founding%20Member%20Application%20%E2%80%94%20L%C3%89MAN%20%C3%8ATRE">Apply for the table →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a href="/">← Return to the manifesto</a>
+  </footer>
+
+  <script>
+    document.documentElement.classList.remove('no-js');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('is-visible');
+      });
+    }, { threshold: 0.18, rootMargin: '0px 0px -7% 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body></html>

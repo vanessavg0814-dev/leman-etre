@@ -7,7 +7,7 @@
   <meta name="robots" content="index, follow">
   <meta property="og:site_name" content="LÉMAN ÊTRE">
   <meta property="og:title" content="LÉMAN ÊTRE — Elevated leisure. An international house of gatherings.">
-  <meta property="og:description" content="Life is measured by the places we go and the conversations we remember. Occasional invitations, cultural notes, first announcements.">
+  <meta property="og:description" content="Life is measured by the places we go and the conversations we remember. The rooms fill quietly — stay close to know where LÉMAN ÊTRE gathers next.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lemanetre.com/">
   <meta name="twitter:card" content="summary_large_image">
@@ -689,8 +689,13 @@
       font-size: clamp(1.4rem, 3vw, 2.6rem);
       letter-spacing: .04em;
       font-weight: 400;
-      margin: 0 0 clamp(2rem, 4vw, 3rem);
+      margin: 0 0 .3em;
       color: var(--ink);
+    }
+    .next-evening-line.following {
+      margin-bottom: clamp(2rem, 4vw, 3rem);
+      color: var(--muted-ink);
+      opacity: .82;
     }
     .next-evening-cta {
       display: inline-block;
@@ -704,6 +709,56 @@
       transition: background .35s var(--ease-silk), color .35s var(--ease-silk), border-color .35s var(--ease-silk);
     }
     .next-evening-cta:hover {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+
+    /* ---- Site nav (right side) — Community + Subscribe ---- */
+    .site-nav-right {
+      display: flex;
+      align-items: center;
+      gap: clamp(.7rem, 1.2vw, 1.1rem);
+      pointer-events: auto;
+    }
+    .site-nav-right .nav-divider {
+      color: currentColor;
+      opacity: .34;
+      font-size: .68rem;
+    }
+
+    /* ---- Home community teaser panel ---- */
+    .community-teaser {
+      min-height: 44svh !important;
+      padding-block: clamp(3rem, 6vw, 5rem) !important;
+    }
+    .community-teaser-block {
+      text-align: center;
+      max-width: min(620px, 88vw);
+    }
+    .community-teaser-eyebrow { color: var(--muted-ink); margin-bottom: clamp(1rem, 2vw, 1.4rem); }
+    .community-teaser-line {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(1.35rem, 2.8vw, 2.4rem);
+      font-weight: 330;
+      line-height: 1.35;
+      letter-spacing: -.014em;
+      color: var(--ink);
+      margin: 0 0 clamp(1.8rem, 3.4vw, 2.6rem);
+    }
+    .community-teaser-cta {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: clamp(.72rem, 1vw, .9rem);
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      padding: .95rem 1.8rem;
+      border: 1px solid rgba(0,0,0,.34);
+      color: var(--ink);
+      transition: background .35s var(--ease-silk), color .35s var(--ease-silk), border-color .35s var(--ease-silk);
+    }
+    .community-teaser-cta:hover {
       background: var(--ink);
       color: var(--paper);
       border-color: var(--ink);
@@ -971,8 +1026,8 @@
 
     .beliefs {
       position: relative;
-      min-height: 130svh;
-      padding-block: clamp(8rem, 14vw, 13rem);
+      min-height: auto;
+      padding-block: clamp(4rem, 8vw, 6.5rem);
     }
 
     .belief-list {
@@ -1792,7 +1847,11 @@
 
   <header class="site-header" aria-label="LÉMAN ÊTRE">
     <a class="brand" href="#top" aria-label="LÉMAN ÊTRE home">LÉMAN ÊTRE</a>
-    <a class="subscribe-nav" href="#subscribe">Subscribe</a>
+    <nav class="site-nav-right" aria-label="Site">
+      <a class="subscribe-nav" href="/people">People</a>
+      <span class="nav-divider" aria-hidden="true">·</span>
+      <a class="subscribe-nav" href="#subscribe">Subscribe</a>
+    </nav>
   </header>
 
   <nav class="chapter-rail" aria-label="Chapter navigation">
@@ -1974,7 +2033,17 @@
       <div class="next-evening-block reveal">
         <p class="eyebrow next-evening-eyebrow">The next evening</p>
         <p class="next-evening-line">Dubai · November 2026</p>
+        <p class="next-evening-line following">California · following</p>
         <a class="next-evening-cta" href="mailto:hello@lemanetre.com?subject=Application%20for%20invitation%20—%20Dubai%20November%202026">Apply for an invitation →</a>
+      </div>
+    </section>
+
+    <!-- People teaser — links to /people -->
+    <section class="panel paper community-teaser" data-scene="">
+      <div class="community-teaser-block reveal">
+        <p class="eyebrow community-teaser-eyebrow">The People</p>
+        <p class="community-teaser-line">Behind every evening, the ones who make it so.</p>
+        <a class="community-teaser-cta" href="/people">Meet them →</a>
       </div>
     </section>
 
@@ -1982,7 +2051,7 @@
       <div class="subscribe-card reveal">
         <p class="eyebrow">Subscribe</p>
         <h2 class="subscribe-title cinematic phrase-rise" data-content-key="subscribe.heading" data-split="words">Receive the next note.</h2>
-        <p class="subscribe-copy cinematic soft-words" data-content-key="subscribe.helper" data-split="words">Occasional invitations, cultural notes, and first announcements from LÉMAN ÊTRE.</p>
+        <p class="subscribe-copy cinematic soft-words" data-content-key="subscribe.helper" data-split="words">The rooms fill quietly. Stay close to LÉMAN ÊTRE and know where we gather next, before invitations close.</p>
         <form class="subscribe-form" id="subscribe-form"
               action="https://lemanetre.us10.list-manage.com/subscribe/post?u=7936ec6a6aaa227f31010a801&amp;id=7837ec7a32&amp;f_id=00cd5be2f0"
               method="post"
@@ -2094,7 +2163,7 @@
       },
       "subscribe": {
             "heading": "Receive the next note.",
-            "helper": "Occasional invitations, cultural notes, and first announcements from LÉMAN ÊTRE.",
+            "helper": "The rooms fill quietly. Stay close to LÉMAN ÊTRE and know where we gather next, before invitations close.",
             "emailLabel": "Email address",
             "button": "Subscribe"
       },
@@ -2200,7 +2269,7 @@
       },
       subscribe: {
         heading: 'Receive the next note.',
-        helper: 'Occasional invitations, cultural notes, and first announcements from LÉMAN ÊTRE.',
+        helper: 'The rooms fill quietly. Stay close to LÉMAN ÊTRE and know where we gather next, before invitations close.',
         emailLabel: 'Email address',
         button: 'Subscribe'
       },
