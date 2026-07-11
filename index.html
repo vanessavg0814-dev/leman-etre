@@ -1028,23 +1028,26 @@
       position: relative;
       min-height: 100vh;
       min-height: 100svh;
-      place-content: center;
-      place-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       padding-block: clamp(4rem, 8vw, 6.5rem);
     }
 
     .belief-list {
-      width: min(960px, 100%);
+      width: min(720px, 100%);
       display: grid;
       gap: clamp(2.4rem, 5vw, 4.4rem);
       margin: 0;
+      text-align: center;
     }
 
     .belief-item {
       display: grid;
-      grid-template-columns: 4.5rem 1fr;
-      gap: clamp(1rem, 4vw, 4rem);
-      align-items: start;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      gap: clamp(.5rem, 1.2vw, .9rem);
       border-top: 1px solid var(--theme-line);
       padding-top: clamp(1.4rem, 2.5vw, 2.5rem);
     }
