@@ -1537,6 +1537,16 @@
 
     .microfade.is-visible .word { transition-delay: var(--word-delay-185); }
 
+    /* Whole line lifts as one, bottom-to-top — no left-to-right word cascade */
+    .lift-up .word {
+      transform: translate3d(0, 1.5em, 0);
+    }
+
+    .lift-up.is-visible .word {
+      transition-delay: 0s;
+      transition-duration: 1.2s;
+    }
+
     .destination-line .char {
       transition: none !important;
     }
@@ -1889,7 +1899,7 @@
         <p class="eyebrow">I</p>
         <p class="manifesto-line cinematic phrase-rise" data-content-key="manifesto.lines.0" data-split="words">The evenings that linger.</p>
         <p class="manifesto-line cinematic phrase-rise" data-content-key="manifesto.lines.1" data-split="words">The people who change how we think.</p>
-        <p class="manifesto-line small cinematic soft-words" data-content-key="manifesto.lines.2" data-split="words">The places that become meaningful because of who was there.</p>
+        <p class="manifesto-line small cinematic lift-up" data-content-key="manifesto.lines.2" data-split="words">The places that become meaningful because of who was there.</p>
       </div>
     </section>
 
@@ -1998,7 +2008,7 @@
     <!-- Chapter V, part B — the closing line, given its own room (no image) -->
     <section class="panel paper" data-scene="">
       <div class="manifesto-block reveal">
-        <p class="manifesto-line closing-line italic cinematic soft-words" data-content-key="manifesto.lines.15" data-split="words">It is finding yourself among people who leave you more inspired than when you arrived.</p>
+        <p class="manifesto-line closing-line italic cinematic lift-up" data-content-key="manifesto.lines.15" data-split="words">It is finding yourself among people who leave you more inspired than when you arrived.</p>
       </div>
     </section>
 
@@ -2026,7 +2036,7 @@
     <!-- Final · A — breathing panel with only the final line -->
     <section class="panel paper final-breath" data-scene="">
       <div class="manifesto-block reveal" style="text-align: center;">
-        <p class="manifesto-line medium italic cinematic phrase-rise" data-content-key="manifesto.lines.19" data-split="words">Where time finds its finest company.</p>
+        <p class="manifesto-line medium italic cinematic lift-up" data-content-key="manifesto.lines.19" data-split="words">Where time finds its finest company.</p>
       </div>
     </section>
 
