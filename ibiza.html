@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Private Round — a founders' week at Can Āylma, a 200-year-old finca above Santa Gertrudis, Ibiza. 23–28 March 2027, by invitation.">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="index, follow">
+  <meta property="og:site_name" content="LÉMAN ÊTRE">
+  <meta property="og:title" content="The Private Round — LÉMAN ÊTRE · Ibiza, 23–28 March 2027">
+  <meta property="og:description" content="Six days. Ten founders. One table. Councils and workshops in the shade, apéros at sunset, Es Vedrà by boat — and the weekend, as Ibiza intends it.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lemanetre.com/ibiza">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Private Round — LÉMAN ÊTRE, Ibiza">
+  <meta name="twitter:description" content="A founders' week at Can Āylma · 23–28 March 2027 · By invitation.">
+  <title>The Private Round — LÉMAN ÊTRE · Ibiza, 23–28 March 2027</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&amp;family=Newsreader:opsz,wght@6..72,300..500&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #ffffff;
+      --ink: #000000;
+      --muted: rgba(0, 0, 0, .64);
+      --hairline: rgba(0, 0, 0, .16);
+      --wash: rgba(0, 0, 0, .035);
+      --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+      --sans: "Hanken Grotesk", Inter, ui-sans-serif, system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .col { max-width: 640px; margin: 0 auto; padding: 0 24px; }
+
+    .kicker {
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 11px;
+      letter-spacing: .32em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    header.masthead { padding: 64px 24px 0; text-align: center; }
+    .brandmark {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 21px;
+      letter-spacing: .42em;
+      text-indent: .42em;
+      text-transform: uppercase;
+    }
+    .brandmark a { color: inherit; text-decoration: none; }
+    .masthead .sub {
+      margin-top: 10px;
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 10px;
+      letter-spacing: .3em;
+      text-indent: .3em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .hero-text { padding: 96px 24px 72px; text-align: center; }
+    .hero-text h1 {
+      font-weight: 400;
+      font-size: clamp(38px, 7vw, 58px);
+      line-height: 1.12;
+      letter-spacing: .01em;
+      margin: 24px 0 28px;
+      text-wrap: balance;
+    }
+    .hero-text h1 em { font-style: italic; }
+    .hero-text .where { font-size: 20px; font-style: italic; color: var(--muted); }
+
+    figure.bleed { margin: 0; }
+    figure.bleed img,
+    figure.bleed video {
+      display: block;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      filter: grayscale(1) contrast(1.04);
+    }
+    figure.bleed figcaption {
+      text-align: center;
+      padding: 14px 24px 0;
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 10px;
+      letter-spacing: .26em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    section { padding: 96px 0; }
+
+    .manifesto p { margin: 0 0 1.5em; }
+    .manifesto em { font-style: italic; }
+    .manifesto .line { text-align: center; font-size: 22px; font-style: italic; margin: 2.2em 0; }
+
+    h2 {
+      font-weight: 400;
+      font-size: 34px;
+      line-height: 1.2;
+      margin: 18px 0 30px;
+      text-wrap: balance;
+    }
+
+    .day { border-top: 1px solid var(--hairline); padding: 40px 0 44px; }
+    .day:last-of-type { border-bottom: 1px solid var(--hairline); }
+    .day .kicker { display: block; margin-bottom: 10px; }
+    .day h3 { font-weight: 400; font-style: italic; font-size: 27px; margin: 0 0 18px; }
+    .day dl { margin: 0; }
+    .day .slot { display: grid; grid-template-columns: 92px 1fr; gap: 18px; padding: 7px 0; }
+    .day dt {
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 10px;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding-top: 7px;
+    }
+    .day dd { margin: 0; font-size: 18px; }
+
+    .formats { display: grid; gap: 0; }
+    .format { border-top: 1px solid var(--hairline); padding: 30px 0; }
+    .format:last-child { border-bottom: 1px solid var(--hairline); }
+    .format h3 { font-weight: 400; font-style: italic; font-size: 23px; margin: 0 0 8px; }
+    .format p { margin: 0; font-size: 18px; color: var(--muted); }
+
+    .pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .pair figure { margin: 0; }
+    .pair img,
+    .pair video {
+      display: block; width: 100%; height: 100%;
+      aspect-ratio: 3 / 4; object-fit: cover;
+      filter: grayscale(1) contrast(1.04);
+    }
+    @media (max-width: 640px) { .pair { grid-template-columns: 1fr; } }
+
+    .particulars { border-top: 1px solid var(--hairline); }
+    .particulars .row {
+      display: grid; grid-template-columns: 170px 1fr; gap: 18px;
+      border-bottom: 1px solid var(--hairline); padding: 16px 0;
+    }
+    .particulars dt {
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 10px; letter-spacing: .24em; text-transform: uppercase;
+      color: var(--muted); padding-top: 6px;
+    }
+    .particulars dd { margin: 0; font-size: 18px; }
+    @media (max-width: 520px) {
+      .day .slot, .particulars .row { grid-template-columns: 1fr; gap: 2px; }
+    }
+
+    .invite { background: var(--wash); text-align: center; }
+    .invite .col { max-width: 560px; }
+    .invite h2 { margin-bottom: 20px; }
+    .invite p { color: var(--muted); margin: 0 0 36px; }
+    .btn {
+      display: inline-block;
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 11px; letter-spacing: .28em; text-indent: .28em; text-transform: uppercase;
+      color: var(--paper); background: var(--ink);
+      padding: 18px 34px; text-decoration: none;
+    }
+    .btn:hover { opacity: .85; }
+    .btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+    .invite .note { margin-top: 28px; font-size: 15px; font-style: italic; }
+
+    /* One shared grade for every image and video when colour arrives:
+       slightly desaturated, warm amber bias — the same palette everywhere. */
+    figure.bleed img, figure.bleed video, .pair img, .pair video {
+      transition: filter .9s ease;
+    }
+    @media (hover: hover) {
+      figure.bleed img:hover, figure.bleed video:hover,
+      .pair img:hover, .pair video:hover {
+        filter: grayscale(.12) sepia(.24) saturate(.82) hue-rotate(-6deg) contrast(1.02) brightness(1.02);
+      }
+    }
+    figure.bleed img.in-colour, figure.bleed video.in-colour,
+    .pair img.in-colour, .pair video.in-colour {
+      filter: grayscale(.12) sepia(.24) saturate(.82) hue-rotate(-6deg) contrast(1.02) brightness(1.02);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      figure.bleed img, figure.bleed video, .pair img, .pair video { transition: none; }
+    }
+
+    footer {
+      padding: 72px 24px 80px;
+      text-align: center;
+      color: var(--muted);
+    }
+    footer .brandmark { font-size: 15px; margin-bottom: 12px; }
+    footer p { font-size: 14px; font-style: italic; margin: 0; }
+  </style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="brandmark"><a href="/" aria-label="LÉMAN ÊTRE home">Léman Être</a></div>
+  <div class="sub">An international house of gatherings</div>
+</header>
+
+<div class="hero-text">
+  <span class="kicker">Ibiza · 23 – 28 March 2027 · By invitation</span>
+  <h1>The Private <em>Round</em></h1>
+  <p class="where">A founders’ week at Can Āylma — a 200-year-old finca in the hills above Santa Gertrudis.<br>Tuesday to Sunday, ending as the weekend does.</p>
+</div>
+
+<figure class="bleed">
+  <video src="/ibiza_hero_video.mp4" autoplay muted loop playsinline aria-label="From the air over the finca, into the dining room at sunset"></video>
+  <figcaption>Can Āylma, Santa Gertrudis de Fruitera</figcaption>
+</figure>
+
+<section class="manifesto">
+  <div class="col">
+    <p>There is a particular loneliness in building something. Not for lack of people — the calendar is full of them — but for lack of rooms where nothing needs to be performed.</p>
+    <p>So the House goes to Ibiza. Not the Ibiza of noise, but the island underneath it: olive groves, almond trees, a hilltop finca that has kept its silence for two hundred years.</p>
+    <p class="line">Six days. Ten founders. One table.</p>
+    <p>We train in the morning and think in the shade. We put real problems on a shared table, work them in council and in workshop, and let sharper eyes look at them. Each evening opens with an apéro at sunset and closes at the fire — until the weekend comes, and the island gets its turn.</p>
+    <p>You will leave rested, but that is not the point. The point is to leave <em>clearer</em> — about the company, and about the person carrying it.</p>
+  </div>
+</section>
+
+<div class="pair">
+  <figure><img src="/ibiza_olive.jpg" loading="lazy" alt="Olive tree in the whitewashed courtyard"></figure>
+  <figure><img src="/ibiza_path.jpg" loading="lazy" alt="Stone pathway through the gardens, lined with palms and bougainvillea"></figure>
+</div>
+
+<section>
+  <div class="col">
+    <span class="kicker">The programme</span>
+    <h2>Six days, in rhythm</h2>
+    <p style="color: var(--muted); margin-bottom: 48px;">Mornings belong to the body, days to the work, evenings open with an apéro at sunset. Midweek ends at the fire; the weekend ends in town.</p>
+
+    <div class="day">
+      <span class="kicker">Day One · Tuesday 23 March</span>
+      <h3>Arrival</h3>
+      <dl>
+        <div class="slot"><dt>Afternoon</dt><dd>Arrivals — the finca is twenty minutes from the airport. Rooms, a swim, the garden.</dd></div>
+        <div class="slot"><dt>Sunset</dt><dd>The first Apéro on the terrace, as the valley goes gold.</dd></div>
+        <div class="slot"><dt>Evening</dt><dd>The first Table, under the oak. One question is asked of everyone; the week begins when the last person has answered.</dd></div>
+        <div class="slot"><dt>Night</dt><dd>Fire.</dd></div>
+      </dl>
+    </div>
+
+    <div class="day">
+      <span class="kicker">Day Two · Wednesday 24 March</span>
+      <h3>Ground</h3>
+      <dl>
+        <div class="slot"><dt>Morning</dt><dd>Breath and movement on the lawn, before the heat. Then the first Council: each founder lays one real, current problem on the table. No pitching, no polish — the room works on it together.</dd></div>
+        <div class="slot"><dt>Afternoon</dt><dd>Long lunch and siesta, then the first Workshop — <em>Narrative</em>: the story the company tells, and the one it should.</dd></div>
+        <div class="slot"><dt>Sunset</dt><dd>Apéro in the garden.</dd></div>
+        <div class="slot"><dt>Evening</dt><dd>Candlelit dinner in the gardens.</dd></div>
+      </dl>
+    </div>
+
+    <div class="day">
+      <span class="kicker">Day Three · Thursday 25 March</span>
+      <h3>Body</h3>
+      <dl>
+        <div class="slot"><dt>Morning</dt><dd>Training at the open-air gym above the valley; ice bath, sauna, massage after.</dd></div>
+        <div class="slot"><dt>Day</dt><dd>Down to the sea — a quiet cove, salt water, lunch by the beach.</dd></div>
+        <div class="slot"><dt>Sunset</dt><dd>Apéro by the pool.</dd></div>
+        <div class="slot"><dt>Evening</dt><dd>A simple dinner. Music at the fire, and nowhere to be.</dd></div>
+      </dl>
+    </div>
+
+    <div class="day">
+      <span class="kicker">Day Four · Friday 26 March</span>
+      <h3>Perspective</h3>
+      <dl>
+        <div class="slot"><dt>Morning</dt><dd>The Walk — in pairs, through the hills to Santa Gertrudis and back. Then the second Workshop — <em>Leverage</em>: what to stop doing, what to double.</dd></div>
+        <div class="slot"><dt>Afternoon</dt><dd>Free hours. The pool, the village, a phone call home.</dd></div>
+        <div class="slot"><dt>Sunset</dt><dd>Apéro on the terrace.</dd></div>
+        <div class="slot"><dt>Evening</dt><dd>The Salon: dinner with an invited guest whose work has nothing to do with yours — which is precisely the point.</dd></div>
+        <div class="slot"><dt>Night</dt><dd>The weekend begins — into town for the first night out.</dd></div>
+      </dl>
+    </div>
+
+    <div class="day">
+      <span class="kicker">Day Five · Saturday 27 March</span>
+      <h3>Resolve</h3>
+      <dl>
+        <div class="slot"><dt>Morning</dt><dd>A slow start, earned. Late practice, then the second Council: what each founder will stop, start, and continue — said aloud, written down, witnessed.</dd></div>
+        <div class="slot"><dt>Day</dt><dd>A day on the water — out past Es Vedrà, around the island's western capes.</dd></div>
+        <div class="slot"><dt>Sunset</dt><dd>Apéro at anchor, or back on the hill.</dd></div>
+        <div class="slot"><dt>Evening</dt><dd>The last long Table. The good bottles.</dd></div>
+        <div class="slot"><dt>Night</dt><dd>Ibiza, properly. The night the island is famous for — together.</dd></div>
+      </dl>
+    </div>
+
+    <div class="day">
+      <span class="kicker">Day Six · Sunday 28 March</span>
+      <h3>Return</h3>
+      <dl>
+        <div class="slot"><dt>Morning</dt><dd>Breakfast without hurry. The pool, quiet.</dd></div>
+        <div class="slot"><dt>Midday</dt><dd>Departures — carrying less than you came with, and more.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<figure class="bleed">
+  <video src="/ibiza_gym_video.mp4" muted loop playsinline preload="metadata" aria-label="The open-air gym, the plunge pool, the sauna and the steam room, above the valley"></video>
+  <figcaption>Gym · plunge · sauna · steam — above the valley</figcaption>
+</figure>
+
+<section>
+  <div class="col">
+    <span class="kicker">The forms of the week</span>
+    <h2>Seven ways of being together</h2>
+    <div class="formats">
+      <div class="format">
+        <h3>The Council</h3>
+        <p>A working circle. One founder's real problem at a time, examined by nine others with no stake in flattering you.</p>
+      </div>
+      <div class="format">
+        <h3>The Workshop</h3>
+        <p>Working sessions on the craft of building — narrative, leverage, the founder's own longevity. Notebooks out, doors closed.</p>
+      </div>
+      <div class="format">
+        <h3>The Walk</h3>
+        <p>Two people, one hour, the old paths between the groves. Some things are only said sideways.</p>
+      </div>
+      <div class="format">
+        <h3>The Apéro</h3>
+        <p>Every evening at sunset — a drink on the terrace as the valley goes quiet, before anyone sits down to dinner.</p>
+      </div>
+      <div class="format">
+        <h3>The Table</h3>
+        <p>Long dinners, prepared by the house chef, that are the true schedule of the week. Conversation is the last course.</p>
+      </div>
+      <div class="format">
+        <h3>The Salon</h3>
+        <p>An evening opened by a guest from another world — to remind the room how large the world is.</p>
+      </div>
+      <div class="format">
+        <h3>The Night</h3>
+        <p>When the weekend arrives, so do we — Friday into town, Saturday into the night the island is famous for.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pair">
+  <figure><video src="/ibiza_boat_video.mp4" muted loop playsinline preload="metadata" aria-label="By boat toward Es Vedrà, along the western cliffs"></video></figure>
+  <figure><video src="/ibiza_pool_video.mp4" muted loop playsinline preload="metadata" aria-label="The pool through the palms, practice on the lawn, massage at sunset"></video></figure>
+</div>
+
+<section>
+  <div class="col">
+    <span class="kicker">The house</span>
+    <h2>A finca that asks nothing of you</h2>
+    <p style="margin-bottom: 40px;">Can Āylma sits on a hill over the valley of Santa Gertrudis, ringed by olive, almond and pine. Ibicenco walls, two hundred years old; interiors gathered from Bali, India, Nepal and Tibet. It is staffed, quiet, and entirely ours for the week.</p>
+    <dl class="particulars">
+      <div class="row"><dt>Rooms</dt><dd>Seven bedrooms, each its own — one master suite with a seventy-square-metre terrace among the citrus trees.</dd></div>
+      <div class="row"><dt>Grounds</dt><dd>Gardens, pool, open-air gym, ice bath, sauna and steam room, massage pavilion, the fire.</dd></div>
+      <div class="row"><dt>Care</dt><dd>House manager and daily staff throughout; chef's kitchen; every practical thing handled before it is noticed.</dd></div>
+      <div class="row"><dt>Situation</dt><dd>Twenty minutes from the airport, fifteen from the beaches, three from the village of Santa Gertrudis.</dd></div>
+      <div class="row"><dt>Company</dt><dd>Ten founders, chosen for the conversation they make together. No audience, no sponsors, no content.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<div class="pair">
+  <figure><video src="/ibiza_food_video.mp4" muted loop playsinline preload="metadata" aria-label="The pizza oven, the breakfast table, fruit and pastry in the morning sun"></video></figure>
+  <figure><img src="/ibiza_kitchen.jpg" loading="lazy" alt="The chef's kitchen, opening onto the terrace"></figure>
+</div>
+
+<figure class="bleed" style="margin-top: 20px;">
+  <img src="/ibiza_fire.jpg" loading="lazy" alt="The firepit and low sofas at dusk">
+  <figcaption>Where each evening ends</figcaption>
+</figure>
+
+<section class="invite">
+  <div class="col">
+    <span class="kicker">The invitation</span>
+    <h2>Ten places at the table</h2>
+    <p>23 – 28 March 2027, Tuesday to Sunday. The week is offered by invitation, as all gatherings of the House are. Write to us — briefly, in your own words — about what you are building and what you would bring to the table.</p>
+    <a class="btn" href="mailto:hello@lemanetre.com?subject=Application%20for%20invitation%20—%20The%20Private%20Round%2C%20Ibiza%2C%2023–28%20March%202027">Apply for an invitation</a>
+    <p class="note">Places are confirmed in the order conversations conclude.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="brandmark"><a href="/">Léman Être</a></div>
+  <p>Elevated leisure. An international house of gatherings.</p>
+</footer>
+
+<script>
+  (function () {
+    var videos = Array.prototype.slice.call(document.querySelectorAll('video'));
+    var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) {
+      videos.forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); });
+    } else {
+      // Hero autoplays; the rest load and play as they approach the viewport.
+      var lazy = videos.filter(function (v) { return !v.autoplay; });
+      var play = function (v) {
+        v.muted = true;
+        var p = v.play();
+        if (p && p.catch) p.catch(function () {});
+      };
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { play(e.target); } else { e.target.pause(); }
+          });
+        }, { rootMargin: '400px 0px' });
+        lazy.forEach(function (v) { io.observe(v); });
+      } else {
+        lazy.forEach(play);
+      }
+      play(videos[0]);
+      ['click', 'touchstart', 'scroll', 'keydown'].forEach(function (evt) {
+        addEventListener(evt, function () { videos.forEach(function (v) {
+          if (v.autoplay) play(v);
+        }); }, { once: true, passive: true });
+      });
+    }
+
+    document.querySelectorAll('figure.bleed img, figure.bleed video, .pair img, .pair video')
+      .forEach(function (m) {
+        m.addEventListener('pointerenter', function () { m.classList.add('in-colour'); });
+        m.addEventListener('pointerleave', function () { m.classList.remove('in-colour'); });
+      });
+  })();
+</script>
+
+</body></html>
