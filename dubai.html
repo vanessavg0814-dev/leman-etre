@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="en" class="no-js"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Maison Léman Être · Longevity Sunseeker · Dubai — a house at sea for presence, vitality and conversation. Dubai Marina, 18 November 2026, aboard the Sunseeker 131.">
+  <meta name="theme-color" content="#000000">
+  <meta name="robots" content="index, follow">
+  <meta property="og:site_name" content="LÉMAN ÊTRE">
+  <meta property="og:title" content="The Longevity of Shared Time — LÉMAN ÊTRE, Dubai Marina, 18 November 2026">
+  <meta property="og:description" content="Four decks, one shared evening. Movement above, regulation below, the table at the heart — aboard the Sunseeker 131 off Dubai Marina.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lemanetre.com/dubai">
+  <meta property="og:image" content="https://lemanetre.com/dubai_evening.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Longevity of Shared Time — LÉMAN ÊTRE, Dubai">
+  <meta name="twitter:description" content="A house at sea · Dubai Marina · 18 November 2026 · Aboard the Sunseeker 131.">
+  <title>The Longevity of Shared Time — LÉMAN ÊTRE · Dubai Marina, 18 November 2026</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&amp;family=Newsreader:opsz,wght@6..72,300..500&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #000000;
+      --paper: #ffffff;
+      --muted: rgba(0, 0, 0, .64);
+      --line: rgba(0, 0, 0, .16);
+      --grain-opacity: .032;
+      --vignette-opacity: .18;
+      --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+      --sans: "Hanken Grotesk", Inter, ui-sans-serif, system-ui, sans-serif;
+      --ease-silk: cubic-bezier(.16, 1, .3, 1);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--paper);
+    }
+
+    html.no-js .reveal { opacity: 1 !important; transform: none !important; filter: none !important; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--sans);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img, video { display: block; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); }
+
+    .skip-link {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 100;
+      transform: translateY(-160%);
+      background: var(--paper);
+      color: var(--ink);
+      padding: .7rem .9rem;
+      border: 1px solid rgba(0, 0, 0, .2);
+      transition: transform .3s var(--ease-silk);
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .grain, .vignette { position: fixed; inset: 0; pointer-events: none; }
+
+    .grain {
+      z-index: 70;
+      opacity: var(--grain-opacity);
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.84' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.66'/%3E%3C/svg%3E");
+      mix-blend-mode: multiply;
+    }
+
+    .vignette {
+      z-index: 60;
+      background:
+        radial-gradient(circle at 50% 40%, rgba(255,255,255,0) 0 38%, rgba(0,0,0,.18) 78%, rgba(0,0,0,.42) 100%),
+        linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,0) 22%, rgba(0,0,0,.10));
+      opacity: var(--vignette-opacity);
+      mix-blend-mode: multiply;
+    }
+
+    .progress-breath {
+      position: fixed;
+      top: 50%;
+      right: clamp(1rem, 2.5vw, 2.25rem);
+      z-index: 80;
+      width: 1px;
+      height: min(28vh, 13rem);
+      transform: translateY(-50%);
+      background: var(--line);
+      overflow: hidden;
+      opacity: .65;
+    }
+    .progress-breath span {
+      display: block;
+      width: 100%;
+      height: var(--progress, 0%);
+      background: rgba(0, 0, 0, .72);
+      transition: height .12s linear;
+    }
+
+    .site-header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 85;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: clamp(1.1rem, 2vw, 2rem);
+      color: #fff;
+      mix-blend-mode: difference;
+      pointer-events: none;
+    }
+    .site-header a { pointer-events: auto; }
+
+    .brand, .nav-link, .eyebrow, .micro, .scroll-hint {
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .68rem;
+      font-weight: 500;
+    }
+
+    .brand {
+      font-family: 'Times New Roman', Times, serif !important;
+      letter-spacing: .22em;
+      font-size: clamp(.95rem, 1.15vw, 1.15rem);
+    }
+
+    .site-nav-right { display: flex; align-items: center; gap: .6rem; }
+    .nav-divider { opacity: .5; }
+    @media (max-width: 560px) { .nav-link.optional, .nav-divider.optional { display: none; } }
+
+    .eyebrow { opacity: .52; margin: 0 0 1.6rem; }
+
+    .panel {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100svh;
+      padding: clamp(5rem, 12vh, 9rem) clamp(1.5rem, 6vw, 5rem);
+      overflow: hidden;
+    }
+    .panel.short { min-height: auto; padding-block: clamp(6rem, 16vh, 11rem); }
+    .panel.dark { background: #000; color: #fff; }
+    .panel.dark .eyebrow { opacity: .58; }
+
+    .panel-media { position: absolute; inset: 0; z-index: 0; }
+    .panel-media img, .panel-media video { opacity: .5; }
+    .panel-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.25) 40%, rgba(0,0,0,.75));
+    }
+    .panel > .inner { position: relative; z-index: 1; width: 100%; max-width: 62rem; }
+    .panel > .inner.narrow { max-width: 44rem; }
+    .panel > .inner.wide { max-width: 74rem; }
+
+    /* ---- Hero ---- */
+    .hero .inner { max-width: 54rem; text-align: center; }
+    .hero-kicker {
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: .34em;
+      font-size: clamp(.56rem, .78vw, .68rem);
+      opacity: .62;
+      margin: 0 0 clamp(1.6rem, 4vh, 2.6rem);
+    }
+    .hero-title {
+      font-family: 'Times New Roman', Times, serif;
+      text-transform: uppercase;
+      letter-spacing: .3em;
+      font-size: clamp(.7rem, .95vw, .86rem);
+      opacity: .72;
+      margin: 0 0 1.4rem;
+    }
+    h1 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(2.4rem, 6.4vw, 5.2rem);
+      line-height: 1.02;
+      letter-spacing: -.032em;
+      margin: 0 0 clamp(1.4rem, 3.4vh, 2rem);
+    }
+    .hero-sub {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-style: italic;
+      font-size: clamp(1rem, 1.6vw, 1.25rem);
+      line-height: 1.6;
+      opacity: .82;
+      margin: 0 auto;
+      max-width: 34rem;
+    }
+    /* ---- The section drawing ---- */
+    .plan { margin: clamp(2rem, 5vh, 3.4rem) auto clamp(1.4rem, 4vh, 2.6rem); }
+    .plan img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      mix-blend-mode: multiply;
+    }
+    .scroll-hint {
+      position: absolute;
+      bottom: clamp(1.2rem, 3vh, 2rem);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      opacity: .5;
+      margin: 0;
+    }
+
+    /* ---- Editorial type ---- */
+    .line {
+      font-family: var(--serif);
+      font-weight: 300;
+      letter-spacing: -.032em;
+      line-height: 1.14;
+      font-size: clamp(1.9rem, 4.4vw, 3.4rem);
+      margin: 0 0 1.1rem;
+    }
+    .line.small {
+      font-size: clamp(1.25rem, 2.2vw, 1.85rem);
+      line-height: 1.34;
+      letter-spacing: -.018em;
+      opacity: .78;
+    }
+    .line.italic { font-style: italic; }
+    .prose {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+      line-height: 1.72;
+      color: var(--muted);
+      max-width: 38rem;
+      margin: 0 0 1.2rem;
+    }
+    .panel.dark .prose { color: rgba(255, 255, 255, .7); }
+
+    /* ---- Movements (the three experiences) ---- */
+    .movements { display: grid; gap: clamp(2.4rem, 5vw, 3.4rem); }
+    @media (min-width: 900px) { .movements { grid-template-columns: repeat(3, 1fr); } }
+    .movement { border-top: 1px solid rgba(255, 255, 255, .22); padding-top: 1.4rem; }
+    .movement .micro { display: block; opacity: .5; margin-bottom: 1rem; }
+    .movement h3 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+      letter-spacing: -.022em;
+      line-height: 1.16;
+      margin: 0 0 .9rem;
+    }
+    .movement p {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: 1.02rem;
+      line-height: 1.68;
+      color: rgba(255, 255, 255, .68);
+      margin: 0 0 1.1rem;
+    }
+    .movement .micro.foot { margin: 0; opacity: .42; font-size: .6rem; }
+
+    /* ---- Plates (the drawn rooms) ---- */
+    .plates { display: grid; gap: clamp(3rem, 8vh, 5.5rem); }
+    .plate img { height: auto; mix-blend-mode: multiply; }
+    .plate-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: .6rem 1.4rem; margin: 0 0 1.2rem; }
+    .plate-head h3 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(1.4rem, 2.4vw, 2rem);
+      letter-spacing: -.022em;
+      margin: 0;
+    }
+    .caption {
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .62rem;
+      opacity: .5;
+      margin: .9rem 0 0;
+    }
+    .panel.dark .caption { opacity: .42; }
+
+    /* ---- Photographic duo ---- */
+    .duo { display: grid; gap: clamp(1rem, 2.4vw, 1.8rem); }
+    @media (min-width: 820px) { .duo { grid-template-columns: 1fr 1fr; align-items: end; } }
+    .frame { position: relative; overflow: hidden; background: #0a0a0a; }
+    .frame.landscape { aspect-ratio: 4 / 3; }
+    .frame.portrait { aspect-ratio: 3 / 4; }
+
+    /* ---- Decks ---- */
+    .facts { display: grid; gap: 0; border-top: 1px solid var(--line); }
+    .fact {
+      display: grid;
+      gap: .5rem 2.5rem;
+      padding: clamp(1.3rem, 2.6vw, 1.9rem) 0;
+      border-bottom: 1px solid var(--line);
+    }
+    @media (min-width: 720px) { .fact { grid-template-columns: 10rem 1fr; align-items: baseline; } }
+    .fact dt {
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .64rem;
+      opacity: .5;
+    }
+    .fact dd {
+      margin: 0;
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+      line-height: 1.5;
+      letter-spacing: -.014em;
+    }
+    .panel.dark .facts, .panel.dark .fact { border-color: rgba(255, 255, 255, .18); }
+    .panel.dark .fact dt { opacity: .46; }
+
+    /* ---- The hours ---- */
+    .hours { display: grid; gap: 0; border-top: 1px solid var(--line); }
+    .hour {
+      display: grid;
+      gap: .35rem 2rem;
+      padding: clamp(1.1rem, 2.2vw, 1.5rem) 0;
+      border-bottom: 1px solid var(--line);
+      align-items: baseline;
+    }
+    @media (min-width: 720px) { .hour { grid-template-columns: 6.5rem 14rem 1fr; } }
+    .hour .t {
+      font-family: var(--sans);
+      letter-spacing: .16em;
+      font-size: .68rem;
+      font-variant-numeric: tabular-nums;
+      opacity: .45;
+    }
+    .hour h4 {
+      margin: 0;
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+      letter-spacing: -.016em;
+    }
+    .hour p {
+      margin: 0;
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: 1rem;
+      line-height: 1.66;
+      color: var(--muted);
+    }
+
+    /* ---- Traces ---- */
+    .traces { display: grid; gap: clamp(1.8rem, 4vw, 2.8rem); margin-top: clamp(2.4rem, 6vh, 3.4rem); }
+    @media (min-width: 700px) { .traces { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1040px) { .traces { grid-template-columns: repeat(3, 1fr); } }
+    .trace { border-top: 1px solid var(--line); padding-top: 1.1rem; }
+    .trace h3 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(1.2rem, 1.9vw, 1.45rem);
+      letter-spacing: -.02em;
+      margin: 0 0 .6rem;
+    }
+    .trace p { font-family: var(--serif); font-weight: 300; font-size: .98rem; line-height: 1.66; color: var(--muted); margin: 0; }
+
+    /* ---- Closing ---- */
+    .closing .inner { text-align: center; max-width: 46rem; }
+    .cta {
+      display: inline-block;
+      margin-top: clamp(2rem, 5vh, 3rem);
+      padding: 1.05rem 2.4rem;
+      border: 1px solid rgba(255, 255, 255, .38);
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: .22em;
+      font-size: .68rem;
+      font-weight: 500;
+      transition: background .4s var(--ease-silk), color .4s var(--ease-silk), border-color .4s var(--ease-silk);
+    }
+    .cta:hover, .cta:focus-visible { background: #fff; color: #000; border-color: #fff; }
+    .cta-note {
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .62rem;
+      opacity: .48;
+      margin: 1.4rem 0 0;
+    }
+
+    .site-footer {
+      background: #000;
+      color: rgba(255, 255, 255, .55);
+      padding: clamp(2.4rem, 6vh, 3.6rem) clamp(1.5rem, 6vw, 5rem) clamp(2.8rem, 7vh, 4rem);
+      display: flex;
+      flex-wrap: wrap;
+      gap: .8rem 2rem;
+      justify-content: space-between;
+      align-items: baseline;
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .62rem;
+    }
+    .site-footer .signature { font-family: 'Times New Roman', Times, serif !important; letter-spacing: .18em; color: #fff; font-size: .8rem; }
+
+    /* ---- Reveal ---- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(2rem);
+      filter: blur(10px);
+      transition: opacity 1.2s var(--ease-silk), transform 1.2s var(--ease-silk), filter 1.2s var(--ease-silk);
+    }
+    .reveal.is-visible { opacity: 1; transform: none; filter: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1 !important; transform: none !important; filter: none !important; transition: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#invitation">Skip to apply for an invitation</a>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="progress-breath" aria-hidden="true"><span></span></div>
+
+  <header class="site-header" aria-label="LÉMAN ÊTRE">
+    <a class="brand" href="/" aria-label="LÉMAN ÊTRE home">LÉMAN ÊTRE</a>
+    <nav class="site-nav-right" aria-label="Site">
+      <a class="nav-link optional" href="#rooms">The rooms</a>
+      <span class="nav-divider optional" aria-hidden="true">·</span>
+      <a class="nav-link" href="/people">People</a>
+      <span class="nav-divider" aria-hidden="true">·</span>
+      <a class="nav-link" href="#invitation">Invitation</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <section class="panel hero dark">
+      <div class="panel-media" aria-hidden="true">
+        <img src="dubai_evening.jpg" alt="" width="1536" height="1024" fetchpriority="high">
+      </div>
+      <div class="inner reveal">
+        <p class="hero-kicker">Dubai Marina · 18 November MMXXVI · Aboard the Sunseeker 131</p>
+        <p class="hero-title">Maison Léman Être · Longevity Sunseeker</p>
+        <h1>The Longevity of Shared Time</h1>
+        <p class="hero-sub">A house at sea — for presence, vitality, conversation, and fully awake senses.</p>
+      </div>
+      <p class="scroll-hint" aria-hidden="true">Scroll slowly</p>
+    </section>
+
+    <section class="panel short">
+      <div class="inner narrow reveal">
+        <p class="eyebrow">I · The thesis</p>
+        <p class="line">Not escape. Presence over time.</p>
+        <p class="line small italic">Luxury is not the setting. It is who shares the time with you.</p>
+        <p class="prose" style="margin-top:2.4rem;">The world has mistaken leisure for escape. We believe it is where life is most fully lived. Beautiful places matter — but they are never the luxury. The luxury is the people, the conversation, the time.</p>
+        <p class="prose">On the eighteenth of November, the House takes to the water off Dubai Marina: elevated leisure as longevity culture, an evening made vivid through movement, regulation, beauty, food, and company.</p>
+      </div>
+    </section>
+
+    <section class="panel short">
+      <div class="inner">
+        <div class="duo">
+          <div class="reveal">
+            <div class="frame portrait">
+              <img src="dubai_porthole.jpg" alt="Seen through a porthole: a guest at the rail with a glass in hand, open water beyond" width="736" height="1035" loading="lazy">
+            </div>
+            <p class="caption">The horizon · from inside the house</p>
+          </div>
+          <div class="reveal">
+            <div class="frame portrait">
+              <img src="dubai_leap.jpg" alt="A guest in black tie mid-air above still water, the sea behind" width="500" height="686" loading="lazy">
+            </div>
+            <p class="caption">Elevated leisure · taken seriously, worn lightly</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel dark" id="rooms">
+      <div class="inner">
+        <div class="reveal">
+          <p class="eyebrow">II · The three experiences</p>
+          <p class="line" style="margin-bottom:clamp(2.6rem,6vh,4rem);">Movement above. Regulation below. The table at the heart.</p>
+        </div>
+        <div class="movements">
+          <article class="movement reveal">
+            <span class="micro">I</span>
+            <h3>The Movement Salon</h3>
+            <p>An upper-deck ritual on Lagree Megaformers — strength and control, in full view of the sea. Visible enough to draw curiosity, far enough from the table never to interrupt dinner.</p>
+            <span class="micro foot">Upper deck · Longevity Hub</span>
+          </article>
+          <article class="movement reveal">
+            <span class="micro">II</span>
+            <h3>The Nervous System Room</h3>
+            <p>A quiet lower-deck return to the self — breath, regulation, sensory calm. The most intimate room of the house, entered alone or in twos.</p>
+            <span class="micro foot">Lower deck · VITAE</span>
+          </article>
+          <article class="movement reveal">
+            <span class="micro">III</span>
+            <h3>The Table</h3>
+            <p>The main deck, and the main show — where the whole house gathers and the night is set. No stage, no pitch, no product. One long table and one conversation.</p>
+            <span class="micro foot">Main deck · The heart of the house</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel short">
+      <div class="inner wide">
+        <div class="reveal">
+          <p class="eyebrow">The rooms, drawn</p>
+          <p class="line small" style="opacity:1;margin-bottom:clamp(2.6rem,6vh,4rem);">Four decks, one shared evening.</p>
+        </div>
+        <div class="plates">
+          <figure class="plate reveal" style="margin:0;">
+            <div class="plate-head"><h3>The Movement Salon</h3><span class="micro" style="opacity:.45;">Upper deck</span></div>
+            <img src="dubai_movement.jpg" alt="Drawing of the upper deck: two guests on Megaformers under the overhang, others watching from lounge chairs, open sea beyond" width="1672" height="711" loading="lazy">
+            <figcaption class="caption">Strength and control, in full view of the sea</figcaption>
+          </figure>
+          <figure class="plate reveal" style="margin:0;">
+            <div class="plate-head"><h3>The Quiet Rooms</h3><span class="micro" style="opacity:.45;">Lower deck</span></div>
+            <img src="dubai_quiet.jpg" alt="Sectional drawing of the lower deck: a guest reclining in the nervous-system room, and a second cabin set for a quiet encounter" width="1672" height="652" loading="lazy">
+            <figcaption class="caption">Guest cabins adapted — regulation, breath, sensory calm</figcaption>
+          </figure>
+          <figure class="plate reveal" style="margin:0;">
+            <div class="plate-head"><h3>The Table</h3><span class="micro" style="opacity:.45;">Main deck</span></div>
+            <img src="dubai_table.jpg" alt="Drawing of the main deck aft: one long table laid for dinner, lanterns along the rail, sun low on the water" width="1672" height="542" loading="lazy">
+            <figcaption class="caption">The heart of the house — where the evening returns</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel dark short">
+      <div class="inner narrow reveal" style="text-align:center;">
+        <p class="line italic">Rooms are chapters, not the book.</p>
+        <p class="prose" style="margin:2rem auto 0;">The book is the shared evening: arrival, the house walk, the table, one discovery, the return. Not a yacht event with experiences — a house at sea that comes alive as the night does.</p>
+      </div>
+    </section>
+
+    <section class="panel short">
+      <div class="inner reveal">
+        <p class="eyebrow">III · The house at sea</p>
+        <p class="line small" style="opacity:1;">The yacht is read as a sequence, not a maze.</p>
+        <div class="plan">
+          <img src="dubai_decks.jpg" alt="Sectional drawing of the Sunseeker 131: skydeck salon of arrival, upper-deck movement salon, main-deck table, lower-deck quiet rooms" width="1672" height="762" loading="lazy">
+        </div>
+        <dl class="facts">
+          <div class="fact"><dt>Skydeck</dt><dd>The Salon of Arrival — aperitif, scent, horizon, first introductions, and the final gathering</dd></div>
+          <div class="fact"><dt>Upper deck</dt><dd>The Movement Salon — the ritual placed in view, never in the way</dd></div>
+          <div class="fact"><dt>Main deck</dt><dd>The Table — protected. No treatments, no pitch, no interruption</dd></div>
+          <div class="fact"><dt>Lower deck</dt><dd>The Quiet Rooms — regulation and a beauty-of-time encounter, entered privately</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="panel short">
+      <div class="inner reveal">
+        <p class="eyebrow">IV · The shape of the evening</p>
+        <p class="line" style="margin-bottom:clamp(2.2rem,5vh,3.2rem);">Three hours that build.</p>
+        <div class="hours">
+          <div class="hour"><span class="t">00:00</span><h4>Arrival</h4><p>Received without check-in-desk energy. Scent, an aperitif, and a first question.</p></div>
+          <div class="hour"><span class="t">00:20</span><h4>House welcome</h4><p>The host anchors the evening: luxury is not the setting, it is who shares the time with you.</p></div>
+          <div class="hour"><span class="t">00:30</span><h4>House walk</h4><p>Everyone is shown the three rooms together, before anyone discovers one alone.</p></div>
+          <div class="hour"><span class="t">01:00</span><h4>The Table</h4><p>Dinner begins. Seat notes and one house question carry the conversation.</p></div>
+          <div class="hour"><span class="t">01:45</span><h4>Open house</h4><p>Guests may enter one experience. Not all — one is enough. A sound cue brings everyone back.</p></div>
+          <div class="hour"><span class="t">02:40</span><h4>The deck set</h4><p>The house gathers above. A DJ takes the skydeck and the evening turns.</p></div>
+          <div class="hour"><span class="t">Late</span><h4>Under the stars</h4><p>No closing remarks. Departure with the Return Box; the House Letter follows in the morning.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel short">
+      <div class="inner reveal">
+        <p class="eyebrow">V · Traces of the house</p>
+        <div class="duo" style="margin-bottom:clamp(2.4rem,6vh,3.6rem);">
+          <div>
+            <div class="frame portrait">
+              <img src="dubai_tray.jpg" alt="A guest lifting the cloche from a silver tray bearing a LÉMAN ÊTRE card" width="1024" height="1536" loading="lazy">
+            </div>
+          </div>
+          <div>
+            <p class="line small" style="opacity:1;">The evening leaves traces, not souvenirs.</p>
+            <p class="prose" style="margin-top:1.4rem;">Each one exists so the guest feels noticed rather than managed — and so the table is remembered longer than the yacht.</p>
+          </div>
+        </div>
+        <div class="traces">
+          <article class="trace">
+            <h3>The invitation reason</h3>
+            <p>Why you were thought of for this table, written plainly.</p>
+          </article>
+          <article class="trace">
+            <h3>The house question</h3>
+            <p>One question, carried through the whole evening.</p>
+          </article>
+          <article class="trace">
+            <h3>The seat note</h3>
+            <p>Why you sit beside these particular people.</p>
+          </article>
+          <article class="trace">
+            <h3>The chosen portrait</h3>
+            <p>One image selected by the House. Never a gallery dump.</p>
+          </article>
+          <article class="trace">
+            <h3>The Return Box</h3>
+            <p>Scent, object, note, and the next invitation. Never a sponsor bag.</p>
+          </article>
+          <article class="trace">
+            <h3>The House Letter</h3>
+            <p>The next morning, one short note continues the evening.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel short">
+      <div class="inner reveal">
+        <p class="eyebrow">The evening, in short</p>
+        <dl class="facts">
+          <div class="fact"><dt>Gathering</dt><dd>Maison Léman Être · Longevity Sunseeker</dd></div>
+          <div class="fact"><dt>Setting</dt><dd>Aboard the Sunseeker 131, off Dubai&nbsp;Marina</dd></div>
+          <div class="fact"><dt>Date</dt><dd>Wednesday 18 November 2026, before Ibiza</dd></div>
+          <div class="fact"><dt>Form</dt><dd>Arrival, house walk, the table, one discovery, the deck set</dd></div>
+          <div class="fact"><dt>Seats</dt><dd>One table, invited by name</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="panel dark closing" id="invitation">
+      <div class="panel-media" aria-hidden="true">
+        <img src="dubai_helm.jpg" alt="" width="736" height="981" style="object-position: 50% 38%;" loading="lazy">
+      </div>
+      <div class="inner reveal">
+        <p class="eyebrow">18 November 2026 · Dubai Marina</p>
+        <p class="line">The first table at sea is already being set.</p>
+        <p class="prose" style="margin:1.8rem auto 0;">Write to us with a line about yourself and who you would bring. Seats are confirmed by invitation.</p>
+        <a class="cta" href="mailto:hello@lemanetre.com?subject=Maison%20L%C3%A9man%20%C3%8Atre%20%C2%B7%20Longevity%20Sunseeker%2C%20Dubai%2018%20November%202026">Apply for an invitation</a>
+        <p class="cta-note">hello@lemanetre.com</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <span class="signature">LÉMAN ÊTRE</span>
+    <span>Zürich — Dubai — California</span>
+    <span>London, Gstaad &amp; Copenhagen to follow</span>
+    <a href="/">lemanetre.com</a>
+  </footer>
+
+  <script>
+    document.documentElement.classList.remove('no-js');
+
+    (function () {
+      var reveals = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -12% 0px', threshold: .12 });
+      reveals.forEach(function (el, i) {
+        el.style.transitionDelay = (i % 3) * 90 + 'ms';
+        observer.observe(el);
+      });
+    })();
+
+    (function () {
+      var bar = document.querySelector('.progress-breath');
+      if (!bar) return;
+      var ticking = false;
+      function update() {
+        var max = document.documentElement.scrollHeight - window.innerHeight;
+        var pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+        bar.style.setProperty('--progress', pct.toFixed(2) + '%');
+        ticking = false;
+      }
+      window.addEventListener('scroll', function () {
+        if (!ticking) { ticking = true; requestAnimationFrame(update); }
+      }, { passive: true });
+      update();
+    })();
+  </script>
+</body></html>
