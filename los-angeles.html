@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en" class="no-js"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Evening — an intimate LÉMAN ÊTRE dinner for 20–26 guests at The Beverly Hills Hotel. Los Angeles, December 2026.">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="index, follow">
+  <meta property="og:site_name" content="LÉMAN ÊTRE">
+  <meta property="og:title" content="The Evening — LÉMAN ÊTRE, The Beverly Hills Hotel, December 2026">
+  <meta property="og:description" content="One long table in the gardens of the Pink Palace. Golden-hour arrival, a chef-led dinner, a single woven conversation. No stage, no name tags, no pitches.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lemanetre.com/los-angeles">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Evening — LÉMAN ÊTRE, The Beverly Hills Hotel">
+  <meta name="twitter:description" content="An intimate dinner · 20–26 seats · December 2026.">
+  <title>The Evening — LÉMAN ÊTRE · The Beverly Hills Hotel, December 2026</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&amp;family=Newsreader:opsz,wght@6..72,300..500&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #000000;
+      --paper: #ffffff;
+      --muted: rgba(0, 0, 0, .64);
+      --line: rgba(0, 0, 0, .16);
+      --grain-opacity: .032;
+      --vignette-opacity: .18;
+      --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+      --sans: "Hanken Grotesk", Inter, ui-sans-serif, system-ui, sans-serif;
+      --ease-silk: cubic-bezier(.16, 1, .3, 1);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--paper);
+    }
+
+    html.no-js .reveal { opacity: 1 !important; transform: none !important; filter: none !important; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--sans);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img, video { display: block; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); }
+
+    .skip-link {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 100;
+      transform: translateY(-160%);
+      background: var(--paper);
+      color: var(--ink);
+      padding: .7rem .9rem;
+      border: 1px solid rgba(0, 0, 0, .2);
+      transition: transform .3s var(--ease-silk);
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .grain, .vignette { position: fixed; inset: 0; pointer-events: none; }
+
+    .grain {
+      z-index: 70;
+      opacity: var(--grain-opacity);
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.84' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.66'/%3E%3C/svg%3E");
+      mix-blend-mode: multiply;
+    }
+
+    .vignette {
+      z-index: 60;
+      background:
+        radial-gradient(circle at 50% 40%, rgba(255,255,255,0) 0 38%, rgba(0,0,0,.18) 78%, rgba(0,0,0,.42) 100%),
+        linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,0) 22%, rgba(0,0,0,.10));
+      opacity: var(--vignette-opacity);
+      mix-blend-mode: multiply;
+    }
+
+    .progress-breath {
+      position: fixed;
+      top: 50%;
+      right: clamp(1rem, 2.5vw, 2.25rem);
+      z-index: 80;
+      width: 1px;
+      height: min(28vh, 13rem);
+      transform: translateY(-50%);
+      background: var(--line);
+      overflow: hidden;
+      opacity: .65;
+    }
+    .progress-breath span {
+      display: block;
+      width: 100%;
+      height: var(--progress, 0%);
+      background: rgba(0, 0, 0, .72);
+      transition: height .12s linear;
+    }
+
+    .site-header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 85;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: clamp(1.1rem, 2vw, 2rem);
+      color: #fff;
+      mix-blend-mode: difference;
+      pointer-events: none;
+    }
+    .site-header a { pointer-events: auto; }
+
+    .brand, .nav-link, .eyebrow, .micro, .scroll-hint {
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .68rem;
+      font-weight: 500;
+    }
+
+    .brand {
+      font-family: 'Times New Roman', Times, serif !important;
+      letter-spacing: .22em;
+      font-size: clamp(.95rem, 1.15vw, 1.15rem);
+    }
+
+    .site-nav-right { display: flex; align-items: center; gap: .6rem; }
+    .nav-divider { opacity: .5; }
+
+    .eyebrow { opacity: .52; margin: 0 0 1.6rem; }
+
+    .panel {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100svh;
+      padding: clamp(5rem, 12vh, 9rem) clamp(1.5rem, 6vw, 5rem);
+      overflow: hidden;
+    }
+    .panel.short { min-height: auto; padding-block: clamp(6rem, 16vh, 11rem); }
+    .panel.dark { background: #000; color: #fff; }
+    .panel.dark .eyebrow { opacity: .58; }
+
+    .panel-media { position: absolute; inset: 0; z-index: 0; }
+    .panel-media img, .panel-media video { opacity: .5; }
+    .panel-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.25) 40%, rgba(0,0,0,.75));
+    }
+    .panel > .inner { position: relative; z-index: 1; width: 100%; max-width: 62rem; }
+    .panel > .inner.narrow { max-width: 44rem; }
+
+    /* ---- Hero ---- */
+    .hero .inner { max-width: 54rem; text-align: center; }
+    .hero-kicker {
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: .34em;
+      font-size: clamp(.6rem, .8vw, .7rem);
+      opacity: .7;
+      margin: 0 0 clamp(2rem, 5vh, 3.4rem);
+    }
+    .hero-title {
+      font-family: 'Times New Roman', Times, serif;
+      text-transform: uppercase;
+      letter-spacing: .3em;
+      font-size: clamp(.75rem, 1vw, .9rem);
+      opacity: .8;
+      margin: 0 0 1.4rem;
+    }
+    h1 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(2.4rem, 6.4vw, 5.2rem);
+      line-height: 1.02;
+      letter-spacing: -.032em;
+      margin: 0 0 clamp(1.6rem, 4vh, 2.4rem);
+    }
+    .hero-sub {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-style: italic;
+      font-size: clamp(1rem, 1.6vw, 1.25rem);
+      line-height: 1.6;
+      opacity: .82;
+      margin: 0;
+    }
+    .scroll-hint {
+      position: absolute;
+      bottom: clamp(1.4rem, 4vh, 2.6rem);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      opacity: .55;
+      margin: 0;
+    }
+
+    /* ---- Editorial type ---- */
+    .line {
+      font-family: var(--serif);
+      font-weight: 300;
+      letter-spacing: -.032em;
+      line-height: 1.14;
+      font-size: clamp(1.9rem, 4.4vw, 3.4rem);
+      margin: 0 0 1.1rem;
+    }
+    .line.small {
+      font-size: clamp(1.25rem, 2.2vw, 1.85rem);
+      line-height: 1.34;
+      letter-spacing: -.018em;
+      opacity: .78;
+    }
+    .line.italic { font-style: italic; }
+    .prose {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+      line-height: 1.72;
+      color: var(--muted);
+      max-width: 38rem;
+      margin: 0 0 1.2rem;
+    }
+    .panel.dark .prose { color: rgba(255, 255, 255, .7); }
+
+    /* ---- Movements (the shape of the night) ---- */
+    .movements { display: grid; gap: clamp(2.4rem, 5vw, 3.4rem); }
+    @media (min-width: 900px) { .movements { grid-template-columns: repeat(3, 1fr); } }
+    .movement { border-top: 1px solid rgba(255, 255, 255, .22); padding-top: 1.4rem; }
+    .movement .micro { display: block; opacity: .5; margin-bottom: 1rem; }
+    .movement h3 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+      letter-spacing: -.022em;
+      line-height: 1.16;
+      margin: 0 0 .9rem;
+    }
+    .movement p {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: 1.02rem;
+      line-height: 1.68;
+      color: rgba(255, 255, 255, .68);
+      margin: 0;
+    }
+
+    /* ---- Image duo ---- */
+    .duo { display: grid; gap: clamp(1rem, 2.4vw, 1.8rem); }
+    @media (min-width: 820px) { .duo { grid-template-columns: 1.25fr 1fr; align-items: end; } }
+    .frame { position: relative; overflow: hidden; background: #0a0a0a; }
+    .frame.landscape { aspect-ratio: 4 / 3; }
+    .frame.portrait { aspect-ratio: 3 / 4; }
+    .caption {
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .62rem;
+      opacity: .5;
+      margin: .8rem 0 0;
+    }
+
+    /* ---- Facts ---- */
+    .facts { display: grid; gap: 0; border-top: 1px solid var(--line); }
+    .fact {
+      display: grid;
+      gap: .5rem 2.5rem;
+      padding: clamp(1.3rem, 2.6vw, 1.9rem) 0;
+      border-bottom: 1px solid var(--line);
+    }
+    @media (min-width: 720px) { .fact { grid-template-columns: 10rem 1fr; align-items: baseline; } }
+    .fact dt {
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .64rem;
+      opacity: .5;
+    }
+    .fact dd {
+      margin: 0;
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+      line-height: 1.5;
+      letter-spacing: -.014em;
+    }
+
+    /* ---- Two ways in ---- */
+    .ways { display: grid; gap: clamp(2.2rem, 5vw, 4rem); margin-top: clamp(2.4rem, 6vh, 3.6rem); }
+    @media (min-width: 860px) { .ways { grid-template-columns: 1fr 1fr; } }
+    .way { border-top: 1px solid var(--line); padding-top: 1.4rem; }
+    .way h3 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+      letter-spacing: -.022em;
+      margin: 0 0 .9rem;
+    }
+    .way p { font-family: var(--serif); font-weight: 300; font-size: 1.02rem; line-height: 1.7; color: var(--muted); margin: 0; }
+
+    /* ---- Closing ---- */
+    .closing .inner { text-align: center; max-width: 46rem; }
+    .cta {
+      display: inline-block;
+      margin-top: clamp(2rem, 5vh, 3rem);
+      padding: 1.05rem 2.4rem;
+      border: 1px solid rgba(255, 255, 255, .38);
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: .22em;
+      font-size: .68rem;
+      font-weight: 500;
+      transition: background .4s var(--ease-silk), color .4s var(--ease-silk), border-color .4s var(--ease-silk);
+    }
+    .cta:hover, .cta:focus-visible { background: #fff; color: #000; border-color: #fff; }
+    .cta-note {
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .62rem;
+      opacity: .48;
+      margin: 1.4rem 0 0;
+    }
+
+    .site-footer {
+      background: #000;
+      color: rgba(255, 255, 255, .55);
+      padding: clamp(2.4rem, 6vh, 3.6rem) clamp(1.5rem, 6vw, 5rem) clamp(2.8rem, 7vh, 4rem);
+      display: flex;
+      flex-wrap: wrap;
+      gap: .8rem 2rem;
+      justify-content: space-between;
+      align-items: baseline;
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .62rem;
+    }
+    .site-footer .signature { font-family: 'Times New Roman', Times, serif !important; letter-spacing: .18em; color: #fff; font-size: .8rem; }
+
+    /* ---- Reveal ---- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(2rem);
+      filter: blur(10px);
+      transition: opacity 1.2s var(--ease-silk), transform 1.2s var(--ease-silk), filter 1.2s var(--ease-silk);
+    }
+    .reveal.is-visible { opacity: 1; transform: none; filter: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1 !important; transform: none !important; filter: none !important; transition: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#seat">Skip to request a seat</a>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="progress-breath" aria-hidden="true"><span></span></div>
+
+  <header class="site-header" aria-label="LÉMAN ÊTRE">
+    <a class="brand" href="/" aria-label="LÉMAN ÊTRE home">LÉMAN ÊTRE</a>
+    <nav class="site-nav-right" aria-label="Site">
+      <a class="nav-link" href="#setting">Setting</a>
+      <span class="nav-divider" aria-hidden="true">·</span>
+      <a class="nav-link" href="/people">People</a>
+      <span class="nav-divider" aria-hidden="true">·</span>
+      <a class="nav-link" href="#seat">Request a seat</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <section class="panel hero dark">
+      <div class="panel-media" aria-hidden="true">
+        <img src="tux_lounge_wide.png" alt="">
+      </div>
+      <div class="inner reveal">
+        <p class="hero-kicker">The Beverly Hills Hotel · Los Angeles · December 2026</p>
+        <p class="hero-title">The Evening</p>
+        <h1>One long table in the gardens of the Pink Palace.</h1>
+        <p class="hero-sub">An intimate dinner. Twenty to twenty-six seats. One conversation, carried from the first course to the last.</p>
+      </div>
+      <p class="scroll-hint" aria-hidden="true">Scroll slowly</p>
+    </section>
+
+    <section class="panel short">
+      <div class="inner narrow reveal">
+        <p class="eyebrow">I · The invitation</p>
+        <p class="line">Beautiful surroundings are never the destination.</p>
+        <p class="line small italic">They are invitations to slow down, to engage, to discover, and to belong.</p>
+        <p class="prose" style="margin-top:2.4rem;">Born on the shores of Lake Geneva and carried from Zürich to Dubai, the House now sets its table in California — at a hotel that has been holding the city's conversations since 1912. The Evening is the smaller of our gatherings: the one that stays in the room.</p>
+      </div>
+    </section>
+
+    <section class="panel dark">
+      <div class="inner">
+        <div class="reveal">
+          <p class="eyebrow">II · The shape of the night</p>
+          <p class="line" style="margin-bottom:clamp(2.6rem,6vh,4rem);">Golden hour, then the table, then the fire.</p>
+        </div>
+        <div class="movements">
+          <article class="movement reveal">
+            <span class="micro">First</span>
+            <h3>Arrival with the light</h3>
+            <p>Up the palm drive off Sunset as the light turns. A swim for those who want it, an aperitivo under the trees for those who don't. Nothing begins on a schedule.</p>
+          </article>
+          <article class="movement reveal">
+            <span class="micro">Second</span>
+            <h3>A chef-led dinner</h3>
+            <p>One long table, laid for twenty-six. The evening is carried by a single woven conversation — a question posed with each course, answered around the whole table rather than in pairs.</p>
+          </article>
+          <article class="movement reveal">
+            <span class="micro">Third</span>
+            <h3>Digestif by fire</h3>
+            <p>The table dissolves into the garden. A last glass, unhurried, no closing remarks. The evening ends itself.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel short" id="setting">
+      <div class="inner narrow reveal">
+        <p class="eyebrow">The setting</p>
+        <p class="line small" style="opacity:1;">The Beverly Hills Hotel.</p>
+        <p class="prose" style="margin-top:2rem;">The Pink Palace on Sunset Boulevard — open since 1912, and for a century the room where Los Angeles has done its talking. Palms, bungalows, gardens that hold a conversation without amplifying it. We take one table in it.</p>
+        <p class="prose"><a href="https://www.dorchestercollection.com/los-angeles/the-beverly-hills-hotel" style="border-bottom:1px solid rgba(0,0,0,.28);">9641 Sunset Boulevard, Beverly Hills, California</a></p>
+      </div>
+    </section>
+
+    <section class="panel short">
+      <div class="inner">
+        <div class="duo">
+          <div class="reveal">
+            <div class="frame landscape">
+              <video src="picnic_video.mp4" autoplay muted loop playsinline preload="metadata"
+                     poster="picnic_video_preview.jpg"
+                     aria-label="A long counter seen from above — records, bottles on lit shelves, dinner in progress"></video>
+            </div>
+            <p class="caption">The table · one conversation</p>
+          </div>
+          <div class="reveal">
+            <div class="frame portrait">
+              <img src="rooftop_nyc.jpg" alt="A swimmer surfacing in open water at golden hour">
+            </div>
+            <p class="caption">Before dinner · the water</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel dark short">
+      <div class="inner narrow reveal" style="text-align:center;">
+        <p class="line italic">No stage. No name tags. No pitches.</p>
+        <p class="prose" style="margin:2rem auto 0;">The rarest luxury is not exclusivity. It is finding yourself among people who leave you more inspired than when you arrived.</p>
+      </div>
+    </section>
+
+    <section class="panel short">
+      <div class="inner narrow reveal">
+        <p class="eyebrow">III · Who sits at the table</p>
+        <p class="line small" style="opacity:1;">Every seat is invited by name and earned by work.</p>
+        <p class="prose" style="margin-top:2rem;">Builders and creators — of companies, of culture, of science, of what the body can do — and the investors who back them. People who make things, gather people, and follow their curiosity further than most.</p>
+      </div>
+    </section>
+
+    <section class="panel short">
+      <div class="inner reveal">
+        <p class="eyebrow">The evening, in short</p>
+        <dl class="facts">
+          <div class="fact"><dt>Gathering</dt><dd>The Evening — an intimate dinner</dd></div>
+          <div class="fact"><dt>Seats</dt><dd>20–26, invited by name</dd></div>
+          <div class="fact"><dt>Setting</dt><dd>The Beverly Hills Hotel — 9641 Sunset Boulevard, Beverly&nbsp;Hills</dd></div>
+          <div class="fact"><dt>Season</dt><dd>December 2026, following Dubai</dd></div>
+          <div class="fact"><dt>Form</dt><dd>Golden-hour arrival, swim or aperitivo, chef-led dinner, digestif by fire</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="panel short">
+      <div class="inner narrow reveal">
+        <p class="eyebrow">IV · The House in California</p>
+        <p class="line small" style="opacity:1;">The California chapter is carried by Reza Kazemipour.</p>
+        <p class="prose" style="margin-top:2rem;">Two decades across venture, mergers, and the boardroom, now CEO of Sixth Ring, the first generative-AI wellness platform trained on Olympic performance data. He sets the room here as our circle does in Zürich and Dubai.</p>
+      </div>
+    </section>
+
+    <section class="panel short">
+      <div class="inner reveal">
+        <p class="eyebrow">Take part</p>
+        <p class="line">Two ways to help set the room.</p>
+        <div class="ways">
+          <article class="way">
+            <h3>Hosts &amp; venues</h3>
+            <p>December is set. The tables after it are not. Lend the House a room worth remembering — an estate, a vineyard, a table. In return: a curated audience of taste, discretion in every detail, and a story your walls will keep.</p>
+          </article>
+          <article class="way">
+            <h3>Co-hosts &amp; curators</h3>
+            <p>Help set the room — shape the guest list, bring your craft or your cellar to the table, and make the evening yours as much as ours.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel dark closing" id="seat">
+      <div class="inner reveal">
+        <p class="eyebrow">December 2026</p>
+        <p class="line">The first table in California is already being set.</p>
+        <p class="prose" style="margin:1.8rem auto 0;">Write to us with a line about yourself and who you would bring. Seats are confirmed by invitation.</p>
+        <a class="cta" href="mailto:hello@lemanetre.com?subject=The%20Evening%20%C2%B7%20The%20Beverly%20Hills%20Hotel%2C%20December%202026">Request a seat</a>
+        <p class="cta-note">hello@lemanetre.com</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <span class="signature">LÉMAN ÊTRE</span>
+    <span>Zürich — Dubai — California</span>
+    <span>London, Gstaad &amp; Copenhagen to follow</span>
+    <a href="/">lemanetre.com</a>
+  </footer>
+
+  <script>
+    document.documentElement.classList.remove('no-js');
+
+    (function () {
+      var reveals = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -12% 0px', threshold: .12 });
+      reveals.forEach(function (el, i) {
+        el.style.transitionDelay = (i % 3) * 90 + 'ms';
+        observer.observe(el);
+      });
+    })();
+
+    (function () {
+      var bar = document.querySelector('.progress-breath');
+      if (!bar) return;
+      var ticking = false;
+      function update() {
+        var max = document.documentElement.scrollHeight - window.innerHeight;
+        var pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+        bar.style.setProperty('--progress', pct.toFixed(2) + '%');
+        ticking = false;
+      }
+      window.addEventListener('scroll', function () {
+        if (!ticking) { ticking = true; requestAnimationFrame(update); }
+      }, { passive: true });
+      update();
+    })();
+  </script>
+</body></html>
