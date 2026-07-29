@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Rooms and places for The Private Round — seven bedrooms and one master suite at Can Āylma, Ibiza. Members €8,000 · guests €10,000 · couples €12,000.">
+  <meta name="theme-color" content="#000000">
+  <meta name="robots" content="index, follow">
+  <meta property="og:site_name" content="LÉMAN ÊTRE">
+  <meta property="og:title" content="Rooms &amp; Places — The Private Round · LÉMAN ÊTRE, Ibiza">
+  <meta property="og:description" content="Seven bedrooms, one master suite, the whole finca ours. A place carries the week entire.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lemanetre.com/ibiza-rooms">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rooms &amp; Places — The Private Round, Ibiza">
+  <meta name="twitter:description" content="Can Āylma · 23–28 March 2027 · By invitation.">
+  <title>Rooms &amp; Places — The Private Round · LÉMAN ÊTRE, Ibiza</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&amp;family=Newsreader:opsz,wght@6..72,300..500&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #000000;
+      --ink: #F2EFE7;
+      --muted: rgba(242, 239, 231, .62);
+      --hairline: rgba(242, 239, 231, .18);
+      --wash: rgba(242, 239, 231, .05);
+      --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+      --sans: "Hanken Grotesk", Inter, ui-sans-serif, system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .col { max-width: 640px; margin: 0 auto; padding: 0 24px; }
+
+    .kicker {
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 11px;
+      letter-spacing: .32em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .kicker a { color: inherit; text-decoration: none; }
+    .kicker a:hover { color: var(--ink); }
+
+    header.masthead { padding: 64px 24px 0; text-align: center; }
+    .brandmark {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 21px;
+      letter-spacing: .42em;
+      text-indent: .42em;
+      text-transform: uppercase;
+    }
+    .brandmark a { color: inherit; text-decoration: none; }
+    .masthead .sub {
+      margin-top: 10px;
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 10px;
+      letter-spacing: .3em;
+      text-indent: .3em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .hero-text { padding: 96px 24px 72px; text-align: center; }
+    .hero-text h1 {
+      font-weight: 400;
+      font-size: clamp(38px, 7vw, 58px);
+      line-height: 1.12;
+      letter-spacing: .01em;
+      margin: 24px 0 28px;
+      text-wrap: balance;
+    }
+    .hero-text h1 em { font-style: italic; }
+    .hero-text .where { font-size: 20px; font-style: italic; color: var(--muted); }
+
+    section { padding: 72px 0; }
+
+    .manifesto p { margin: 0 0 1.5em; }
+    .manifesto em { font-style: italic; }
+
+    h2 {
+      font-weight: 400;
+      font-size: 34px;
+      line-height: 1.2;
+      margin: 18px 0 30px;
+      text-wrap: balance;
+    }
+
+    /* Rooms */
+    .rooms { max-width: 960px; margin: 0 auto; padding: 0 24px; display: grid; gap: 72px; }
+    .room {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(24px, 4vw, 48px);
+      align-items: center;
+    }
+    .room figure { margin: 0; }
+    .room img {
+      display: block; width: 100%;
+      aspect-ratio: 4 / 3; object-fit: cover;
+      filter: grayscale(1) contrast(1.04);
+      transition: filter .9s ease;
+    }
+    .room.flip figure { order: 2; }
+    .room h3 { font-weight: 400; font-style: italic; font-size: 27px; margin: 0 0 6px; }
+    .room .kicker { display: block; margin-bottom: 14px; }
+    .room p { margin: 0; font-size: 18px; color: var(--muted); }
+    @media (max-width: 680px) {
+      .room, .room.flip { grid-template-columns: 1fr; }
+      .room.flip figure { order: 0; }
+    }
+
+    @media (hover: hover) {
+      .room img:hover {
+        filter: grayscale(.12) sepia(.24) saturate(.82) hue-rotate(-6deg) contrast(1.02) brightness(1.02);
+      }
+    }
+    .room img.in-colour {
+      filter: grayscale(.12) sepia(.24) saturate(.82) hue-rotate(-6deg) contrast(1.02) brightness(1.02);
+    }
+    @media (prefers-reduced-motion: reduce) { .room img { transition: none; } }
+
+    /* Rates */
+    .rates { border-top: 1px solid var(--hairline); }
+    .rates .row {
+      display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: baseline;
+      border-bottom: 1px solid var(--hairline); padding: 26px 0;
+    }
+    .rates .who { font-size: 21px; }
+    .rates .who small {
+      display: block;
+      font-family: var(--sans);
+      font-size: 10px; letter-spacing: .24em; text-transform: uppercase;
+      color: var(--muted); margin-top: 6px;
+    }
+    .rates .price {
+      font-family: "Times New Roman", Times, serif;
+      font-size: clamp(26px, 4vw, 34px);
+      letter-spacing: .04em;
+      white-space: nowrap;
+    }
+    .rate-note { font-size: 15px; font-style: italic; color: var(--muted); margin-top: 28px; }
+
+    .invite { background: var(--wash); text-align: center; }
+    .invite .col { max-width: 560px; }
+    .invite h2 { margin-bottom: 20px; }
+    .invite p { color: var(--muted); margin: 0 0 36px; }
+    .btn {
+      display: inline-block;
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 11px; letter-spacing: .28em; text-indent: .28em; text-transform: uppercase;
+      color: var(--paper); background: var(--ink);
+      padding: 18px 34px; text-decoration: none;
+    }
+    .btn:hover { opacity: .85; }
+    .btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+    .invite .note { margin-top: 28px; font-size: 15px; font-style: italic; }
+    .backlink {
+      display: inline-block; margin-top: 34px;
+      font-family: var(--sans);
+      font-size: 11px; letter-spacing: .28em; text-transform: uppercase;
+      color: var(--muted); text-decoration: none;
+    }
+    .backlink:hover { color: var(--ink); }
+
+    footer {
+      padding: 72px 24px 80px;
+      text-align: center;
+      color: var(--muted);
+    }
+    footer .brandmark { font-size: 15px; margin-bottom: 12px; }
+    footer p { font-size: 14px; font-style: italic; margin: 0; }
+  </style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="brandmark"><a href="/" aria-label="LÉMAN ÊTRE home">Léman Être</a></div>
+  <div class="sub">An international house of gatherings</div>
+</header>
+
+<div class="hero-text">
+  <span class="kicker"><a href="/ibiza">The Private Round</a> · Ibiza · 23 – 28 March 2027</span>
+  <h1>Rooms &amp; <em>Places</em></h1>
+  <p class="where">Seven bedrooms, one master suite — the whole finca ours for the week.</p>
+</div>
+
+<section class="manifesto">
+  <div class="col">
+    <p>Can Āylma sleeps the week's ten in seven uniquely styled rooms, each its own — thick Ibicenco walls, artisanal furniture gathered from Bali, India, Nepal and Tibet, air-purified and climate-kept for deep, restorative sleep. No two rooms are alike; every one is quiet.</p>
+  </div>
+</section>
+
+<section>
+  <div class="rooms">
+    <div class="room">
+      <figure><img src="/ibiza_room_master.jpg" alt="The master suite, opening onto its private white terrace among the palms"></figure>
+      <div>
+        <span class="kicker">One only</span>
+        <h3>The Master Suite</h3>
+        <p>The finca's one suite: a seventy-square-metre private terrace among the citrus trees, an outdoor shower under the sky, and garden views over the valley. Reserved first — usually for the couple at the table.</p>
+      </div>
+    </div>
+
+    <div class="room flip">
+      <figure><img src="/ibiza_room_finca.jpg" alt="A finca room under the original two-hundred-year-old sabina beams"></figure>
+      <div>
+        <span class="kicker">The old house</span>
+        <h3>The Finca Rooms</h3>
+        <p>In the oldest part of the house, under sabina beams that have held the roof for two centuries — antique wood, arched stone bathrooms, and the particular silence of very thick walls.</p>
+      </div>
+    </div>
+
+    <div class="room">
+      <figure><img src="/ibiza_room_garden.jpg" alt="A garden room, whitewashed, opening straight onto the gardens"></figure>
+      <div>
+        <span class="kicker">The gardens</span>
+        <h3>The Garden Rooms</h3>
+        <p>Whitewashed and light, opening straight onto the terraces — palms at the door, morning sun across the bed, and the shortest possible walk to the pool.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="col">
+    <span class="kicker">The places</span>
+    <h2>What a place carries</h2>
+    <p style="color: var(--muted); margin-bottom: 40px;">A place holds a private room for the six days and the week entire — the table, the wellness grounds, the councils and the workshops, the days on land and on water. Rooms are assigned in the order places are confirmed, the master suite first.</p>
+    <div class="rates">
+      <div class="row">
+        <div class="who">Members of the House<small>A private room · one place at the table</small></div>
+        <div class="price">€ 8,000</div>
+      </div>
+      <div class="row">
+        <div class="who">Guests of the House<small>A private room · one place at the table</small></div>
+        <div class="price">€ 10,000</div>
+      </div>
+      <div class="row">
+        <div class="who">Couples<small>One room shared · two places at the table</small></div>
+        <div class="price">€ 12,000</div>
+      </div>
+    </div>
+    <p class="rate-note">Travel to the island is each guest's own; from the moment you land, the House takes over.</p>
+  </div>
+</section>
+
+<section class="invite">
+  <div class="col">
+    <span class="kicker">The invitation</span>
+    <h2>Ten places at the table</h2>
+    <p>The week is offered by invitation, as all gatherings of the House are. Write to us — briefly, in your own words — about what you are building and what you would bring to the table.</p>
+    <a class="btn" href="mailto:hello@lemanetre.com?subject=Application%20for%20invitation%20—%20The%20Private%20Round%2C%20Ibiza%2C%2023–28%20March%202027">Apply for an invitation</a>
+    <p class="note">Places are confirmed in the order conversations conclude.</p>
+    <a class="backlink" href="/ibiza">← The Private Round</a>
+  </div>
+</section>
+
+<footer>
+  <div class="brandmark"><a href="/">Léman Être</a></div>
+  <p>Elevated leisure. An international house of gatherings.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.room img').forEach(function (m) {
+    m.addEventListener('pointerenter', function () { m.classList.add('in-colour'); });
+    m.addEventListener('pointerleave', function () { m.classList.remove('in-colour'); });
+  });
+</script>
+
+</body></html>
