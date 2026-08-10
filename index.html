@@ -1606,7 +1606,7 @@
       .manifesto-grid { grid-template-columns: 1fr; }
       .manifesto-block,
       .manifesto-block.left,
-      .manifesto-block.right { text-align: left; }
+      .manifesto-block.right { text-align: center; margin-left: auto; margin-right: auto; }
       .material-stack { min-height: 58vh; order: -1; }
       .frame-lake { width: 100%; max-width: 92%; justify-self: start; }
       .frame-table { width: 100%; max-width: 92%; justify-self: end; }
@@ -1623,6 +1623,12 @@
       .setting-table { right: -10vw; width: 56vw; bottom: 9%; }
       .destination-line { font-size: clamp(2.25rem, 12vw, 4.7rem); }
       .destination-line.destination-final { font-size: clamp(2.7rem, 14vw, 5.5rem); }
+      /* Mobile: kill the per-character horizontal "wave" that mangles
+         letter spacing on phones — chars just fade in place. */
+      .destination-line .char,
+      .destination-line.destination-final .char {
+        transform: none !important;
+      }
       .subscribe-form { grid-template-columns: 1fr; }
       .subscribe-form button { width: 100%; }
       .subscribe-success::before { inset-inline: 1.2rem; }
