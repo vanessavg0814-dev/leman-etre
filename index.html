@@ -783,6 +783,90 @@
       border-color: var(--ink);
     }
 
+    /* ---- Membership panel ---- */
+    .membership { min-height: auto !important; }
+    .membership-block {
+      text-align: center;
+      max-width: min(1000px, 92vw);
+      margin-inline: auto;
+    }
+    .membership-eyebrow { color: var(--muted-ink); margin-bottom: clamp(1rem, 2vw, 1.6rem); }
+    .membership-lead {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 3.2vw, 2.8rem);
+      font-weight: 350;
+      line-height: 1.18;
+      letter-spacing: -.014em;
+      color: var(--ink);
+      margin: 0 0 .5em;
+    }
+    .membership-sub {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 330;
+      font-size: clamp(1.15rem, 2vw, 1.6rem);
+      line-height: 1.35;
+      color: var(--muted-ink);
+      margin: 0 0 clamp(2.6rem, 5.5vw, 4rem);
+    }
+    .membership-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2.2rem, 5vw, 4.5rem);
+      text-align: center;
+      margin-bottom: clamp(2.6rem, 5vw, 3.8rem);
+    }
+    .membership-col h3,
+    .membership-extra h3 {
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-size: .74rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 0 0 clamp(.9rem, 1.8vw, 1.3rem);
+    }
+    .membership-col p,
+    .membership-extra p {
+      font-family: var(--serif);
+      font-size: clamp(1.02rem, 1.5vw, 1.2rem);
+      line-height: 1.62;
+      color: var(--muted-ink);
+      margin: 0;
+    }
+    .membership-extra {
+      max-width: 64ch;
+      margin: 0 auto clamp(1.8rem, 3.6vw, 2.6rem);
+    }
+    .membership-terms {
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .72rem;
+      color: var(--muted-ink);
+      opacity: .68;
+      margin: 0 0 clamp(2rem, 4vw, 2.8rem);
+    }
+    .membership-cta {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: clamp(.72rem, 1vw, .9rem);
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      padding: .95rem 1.8rem;
+      border: 1px solid rgba(0,0,0,.34);
+      color: var(--ink);
+      transition: background .35s var(--ease-silk), color .35s var(--ease-silk), border-color .35s var(--ease-silk);
+    }
+    .membership-cta:hover {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+    @media (max-width: 760px) {
+      .membership-cols { grid-template-columns: 1fr; gap: clamp(2.4rem, 7vw, 3.2rem); }
+    }
+
     /* ---- Right-rail chapter markers (I / II / III / IV / V / VI) ---- */
     .chapter-rail {
       position: fixed;
@@ -2081,6 +2165,31 @@
         <p class="next-evening-line linked"><a href="/ibiza">Ibiza · 23 – 28 March 2027</a></p>
         <p class="next-evening-note">The Private Round · A founders’ week at Can Āylma</p>
         <a class="next-evening-cta" href="mailto:hello@lemanetre.com?subject=Application%20for%20invitation%20—%20Los%20Angeles%2C%20Dubai%20%26%20Ibiza">Apply for an invitation →</a>
+      </div>
+    </section>
+
+    <!-- Membership -->
+    <section class="panel paper membership" data-scene="">
+      <div class="membership-block reveal">
+        <p class="eyebrow membership-eyebrow">Membership</p>
+        <p class="membership-lead">A private members’ club.</p>
+        <p class="membership-sub">Two things come with a membership.</p>
+        <div class="membership-cols">
+          <div class="membership-col">
+            <h3>The gatherings</h3>
+            <p>Dinners, conversations and experiences through the year — in Zürich, and wherever else the House goes. Sometimes twelve people around one table. Sometimes a talk, a yacht, a week in Spain. Small rooms, and people worth meeting. Members have a seat at all of it.</p>
+          </div>
+          <div class="membership-col">
+            <h3>The measured year</h3>
+            <p>It begins with a full baseline, taken with independent physicians: blood work, gut health, diagnostics, psychological testing. A goal is set from the results. Through the year the House accompanies the member — recommending specialists, places and reading worth their attention, and keeping the record. Every six months, a review with a physician; then a re-test, and the goal is set again.</p>
+          </div>
+        </div>
+        <div class="membership-extra">
+          <h3>Also kept close</h3>
+          <p>Three conversations a year with the circle the House holds near — an investor, a mentor, a specialist. Introductions to other members. An online concierge. Partners in nine cities, across restaurants, art, fashion and lifestyle, not only health. A membership extends to spouse and children.</p>
+        </div>
+        <p class="membership-terms">By application. Member terms are shared in conversation.</p>
+        <a class="membership-cta" href="mailto:hello@lemanetre.com?subject=Membership%20enquiry">Enquire about membership →</a>
       </div>
     </section>
 
