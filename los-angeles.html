@@ -2,17 +2,17 @@
 <html lang="en" class="no-js"><head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The Evening — an intimate LÉMAN ÊTRE dinner at The Beverly Hills Hotel. Los Angeles, 17 September 2026. By invitation.">
+  <meta name="description" content="The Evening — an intimate LÉMAN ÊTRE dinner at The Beverly Hills Hotel. One table, one reading on arrival and one by the fire. Los Angeles, 17 September 2026. By invitation.">
   <meta name="theme-color" content="#ffffff">
   <meta name="robots" content="index, follow">
   <meta property="og:site_name" content="LÉMAN ÊTRE">
   <meta property="og:title" content="The Evening — LÉMAN ÊTRE, The Beverly Hills Hotel, 17 September 2026">
-  <meta property="og:description" content="One long table in the gardens of the Pink Palace. Golden-hour arrival, a chef-led dinner, a single woven conversation. By invitation only.">
+  <meta property="og:description" content="One long table in the gardens of the Pink Palace. You arrive measured and you leave measured — a chef-led dinner, a question with each course, and the makers of what is newest in longevity seated among the guests.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lemanetre.com/los-angeles">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="The Evening — LÉMAN ÊTRE, The Beverly Hills Hotel">
-  <meta name="twitter:description" content="An intimate dinner · one table · 17 September 2026 · by invitation.">
+  <meta name="twitter:description" content="You arrive measured. You leave measured. One table · 17 September 2026 · by invitation.">
   <title>The Evening — LÉMAN ÊTRE · The Beverly Hills Hotel, 17 September 2026</title>
   <link rel="icon" href="data:,">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -235,25 +235,35 @@
     }
     .panel.dark .prose { color: rgba(255, 255, 255, .7); }
 
-    /* ---- Movements (the shape of the night) ---- */
-    .movements { display: grid; gap: clamp(2.4rem, 5vw, 3.4rem); }
-    @media (min-width: 900px) { .movements { grid-template-columns: repeat(3, 1fr); } }
-    .movement { border-top: 1px solid rgba(255, 255, 255, .22); padding-top: 1.4rem; }
-    .movement .micro { display: block; opacity: .5; margin-bottom: 1rem; }
+    /* ---- Protocol (the shape of the night) ---- */
+    .movements { display: grid; gap: 0; border-top: 1px solid rgba(255, 255, 255, .18); }
+    .movement {
+      display: grid;
+      gap: .55rem 3rem;
+      padding: clamp(1.7rem, 3.4vw, 2.5rem) 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .18);
+    }
+    @media (min-width: 820px) {
+      .movement { grid-template-columns: 11rem 1fr; }
+      .movement .micro { padding-top: .55rem; }
+      .movement p { grid-column: 2; }
+    }
+    .movement .micro { display: block; opacity: .42; margin: 0; line-height: 1.5; }
     .movement h3 {
       font-family: var(--serif);
       font-weight: 300;
       font-size: clamp(1.5rem, 2.4vw, 2.1rem);
       letter-spacing: -.022em;
       line-height: 1.16;
-      margin: 0 0 .9rem;
+      margin: 0 0 .55rem;
     }
     .movement p {
       font-family: var(--serif);
       font-weight: 300;
-      font-size: 1.02rem;
-      line-height: 1.68;
+      font-size: 1.06rem;
+      line-height: 1.7;
       color: rgba(255, 255, 255, .68);
+      max-width: 40rem;
       margin: 0;
     }
 
@@ -408,27 +418,46 @@
       </div>
     </section>
 
+    <section class="panel short" id="idea">
+      <div class="inner narrow reveal">
+        <p class="eyebrow">II · The idea</p>
+        <p class="line">You arrive measured. You leave measured.</p>
+        <p class="prose" style="margin-top:2.2rem;">Every gathering claims to send you home better than it found you. This one asks whether that is true. One instrument, one reading as you arrive, the same reading before you go — and the difference is yours to keep, yours to read as you like.</p>
+        <p class="prose">We promise nothing about the number. We simply think an evening worth remembering ought to be worth measuring.</p>
+      </div>
+    </section>
+
     <section class="panel dark">
       <div class="inner">
         <div class="reveal">
-          <p class="eyebrow">II · The shape of the night</p>
+          <p class="eyebrow">III · The shape of the night</p>
           <p class="line" style="margin-bottom:clamp(2.6rem,6vh,4rem);">Golden hour, then the table, then the fire.</p>
         </div>
         <div class="movements">
           <article class="movement reveal">
-            <span class="micro">First</span>
+            <span class="micro">On arrival</span>
             <h3>Arrival with the light</h3>
-            <p>Up the palm drive off Sunset as the light turns. A swim for those who want it, an aperitivo under the trees for those who don't. Nothing begins on a schedule.</p>
+            <p>Up the palm drive off Sunset as the light turns. A glass under the trees, introductions that are not announcements. Nothing begins on a schedule.</p>
           </article>
           <article class="movement reveal">
-            <span class="micro">Second</span>
+            <span class="micro">The baseline</span>
+            <h3>One reading, to begin</h3>
+            <p>A single instrument, a matter of seconds, passed round with the first glass. No clipboards and no white coats — it belongs to the welcome, not to a clinic.</p>
+          </article>
+          <article class="movement reveal">
+            <span class="micro">The table</span>
             <h3>A chef-led dinner</h3>
             <p>One long table, and no second one. The evening is carried by a single woven conversation — a question posed with each course, answered around the whole table rather than in pairs.</p>
           </article>
           <article class="movement reveal">
-            <span class="micro">Third</span>
-            <h3>Digestif by fire</h3>
-            <p>The table dissolves into the garden. A last glass, unhurried, no closing remarks. The evening ends itself.</p>
+            <span class="micro">Among the guests</span>
+            <h3>The makers, seated</h3>
+            <p>The people building what is newest in longevity are here as guests, in the seats beside you. What they have made appears when a question calls for it, and goes quiet again. Nothing is demonstrated at anyone.</p>
+          </article>
+          <article class="movement reveal">
+            <span class="micro">By the fire</span>
+            <h3>The same reading, again</h3>
+            <p>The table dissolves into the garden. A last glass, unhurried, no closing remarks. Before you go the instrument comes round once more, and you leave with both readings and the distance between them. The evening ends itself.</p>
           </article>
         </div>
       </div>
@@ -456,9 +485,9 @@
           </div>
           <div class="reveal">
             <div class="frame portrait">
-              <img src="rooftop_nyc.jpg" alt="A swimmer surfacing in open water at golden hour">
+              <img src="chateau_ivy_couple.png" alt="Two guests walking up to the house at golden hour, a glass in hand">
             </div>
-            <p class="caption">Before dinner · the water</p>
+            <p class="caption">Arrival · a glass before the table</p>
           </div>
         </div>
       </div>
@@ -467,14 +496,13 @@
     <section class="panel dark short">
       <div class="inner narrow reveal" style="text-align:center;">
         <p class="line italic">No stage. No name tags. Nothing performed.</p>
-        <p class="prose" style="margin:2rem auto 0;">What is newest in longevity comes to the table the way everything else does — carried by the people building it, placed among the guests rather than presented at them, and open to the question that follows.</p>
-        <p class="prose" style="margin:1.4rem auto 0;">The rarest luxury is not exclusivity. It is finding yourself among people who leave you more inspired than when you arrived.</p>
+        <p class="prose" style="margin:2rem auto 0;">The rarest luxury is not exclusivity. It is finding yourself among people who leave you more inspired than when you arrived.</p>
       </div>
     </section>
 
     <section class="panel short">
       <div class="inner narrow reveal">
-        <p class="eyebrow">III · Who sits at the table</p>
+        <p class="eyebrow">IV · Who sits at the table</p>
         <p class="line small" style="opacity:1;">Every seat is invited by name and earned by work.</p>
         <p class="prose" style="margin-top:2rem;">Builders and creators — of companies, of culture, of science, of what the body can do — and the investors who back them. People who make things, gather people, and follow their curiosity further than most.</p>
       </div>
@@ -488,14 +516,15 @@
           <div class="fact"><dt>Seats</dt><dd>One table, kept small by design. Every seat invited by name.</dd></div>
           <div class="fact"><dt>Setting</dt><dd>The Beverly Hills Hotel — 9641 Sunset Boulevard, Beverly&nbsp;Hills</dd></div>
           <div class="fact"><dt>Date</dt><dd>Thursday, 17 September 2026</dd></div>
-          <div class="fact"><dt>Form</dt><dd>Golden-hour arrival, swim or aperitivo, chef-led dinner, digestif by fire</dd></div>
+          <div class="fact"><dt>Form</dt><dd>Golden-hour arrival, an aperitivo in the garden, chef-led dinner, digestif by fire</dd></div>
+          <div class="fact"><dt>Measured</dt><dd>One instrument. One reading on arrival, the same one by the fire.</dd></div>
         </dl>
       </div>
     </section>
 
     <section class="panel short">
       <div class="inner narrow reveal">
-        <p class="eyebrow">IV · The House in California</p>
+        <p class="eyebrow">V · The House in California</p>
         <p class="line small" style="opacity:1;">The California chapter is carried by Reza Kazemipour.</p>
         <p class="prose" style="margin-top:2rem;">Two decades across venture, mergers, and the boardroom, now CEO of Sixth Ring, the first generative-AI wellness platform trained on Olympic performance data. He sets the room here as our circle does in Zürich and Dubai.</p>
       </div>
