@@ -1968,6 +1968,23 @@
       color: #ffffff;
     }
 
+    /* ---- Mobile: lighter text animation (desktop unchanged) ----
+       Phones struggle with animated blur, so drop it (keep the fade + rise),
+       trim the long durations, and stop reserving a GPU layer per character. */
+    @media (max-width: 760px) {
+      .reveal,
+      .cinematic .word,
+      .cinematic .char,
+      .slow-emerge .char { filter: none !important; }
+
+      .reveal { transition-duration: .9s !important; }
+      .cinematic.is-visible .word { transition-duration: .72s !important; }
+      .cinematic.is-visible .char { transition-duration: .68s !important; }
+
+      .word,
+      .char { will-change: auto !important; }
+    }
+
   </style>
 </head>
 <body class="monochrome-edition">
