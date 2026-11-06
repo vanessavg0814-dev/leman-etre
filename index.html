@@ -863,6 +863,16 @@
       color: var(--paper);
       border-color: var(--ink);
     }
+    .membership-fineprint {
+      font-family: var(--sans);
+      font-size: .7rem;
+      line-height: 1.6;
+      letter-spacing: .01em;
+      color: var(--muted-ink);
+      opacity: .5;
+      max-width: 46ch;
+      margin: clamp(2.6rem, 5vw, 3.8rem) auto 0;
+    }
     @media (max-width: 760px) {
       .membership-cols { grid-template-columns: 1fr; gap: clamp(2.4rem, 7vw, 3.2rem); }
     }
@@ -2194,6 +2204,7 @@
         </div>
         <p class="membership-terms">By application. Member terms are shared in conversation.</p>
         <a class="membership-cta" href="mailto:hello@lemanetre.com?subject=Membership%20enquiry">Enquire about membership →</a>
+        <p class="membership-fineprint">Medical assessments and diagnostics are provided by independent licensed professionals. LÉMAN ÊTRE coordinates access and does not provide medical care.</p>
       </div>
     </section>
 
