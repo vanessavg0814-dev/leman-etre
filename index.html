@@ -1984,13 +1984,18 @@
       .word,
       .char { will-change: auto !important; }
 
-      /* Chapter III "elevate": the scroll-driven vertical shifts were tuned for a
-         single-line ground; on mobile the ground wraps and collides with the lift.
-         Pin both lines (kill the shift + blur) and keep a clean gap; opacity carries it. */
-      .elevate-ground { transform: none !important; filter: none !important; }
-      .elevate-lift .word { transform: none !important; filter: none !important; }
-      .elevate-line { line-height: 1.05; }
-      .elevate-line + .elevate-line { margin-top: .4em; }
+      /* Chapter III "elevate": on mobile, render it as a plain, solid, STATIC statement.
+         The scroll-driven fade + per-word shifts (tuned for a single-line desktop ground)
+         ghost and collide once the ground wraps. Kill all of it — full opacity, no shift,
+         no blur — so it reads like a normal manifesto line. */
+      .elevate-copy { transform: none !important; }
+      .elevate-ground,
+      .elevate-lift { opacity: 1 !important; transform: none !important; filter: none !important; }
+      .elevate-ground .word,
+      .elevate-lift .word { opacity: 1 !important; transform: none !important; filter: none !important; }
+      .elevate-line { line-height: 1.1; }
+      .elevate-line + .elevate-line { margin-top: .5em; }
+      .elevate-section { min-height: 100svh; }
     }
 
   </style>
