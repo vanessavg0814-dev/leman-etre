@@ -81,33 +81,16 @@
   <p class="terms">By application. Member terms are shared in conversation.</p>
 
   <div class="actions">
-    <a class="cta primary" id="deposit" href="#" hidden>Apply &amp; hold your place</a>
-    <a class="cta" id="whatsapp" href="#">Apply on WhatsApp</a>
-    <a class="cta" href="mailto:hello@lemanetre.com?subject=Membership%20application">Write to the House</a>
-  </div>
-  <div class="reveal-step" id="deposit-step" hidden>
-    <p class="deposit-note">A deposit of USD 1,000 holds your place while we review your application. It is refunded in full if your application is not accepted, and credited to your first year if it is.</p>
-    <div class="actions"><a class="cta primary" id="deposit-go" href="#">Continue</a></div>
+    <a class="cta primary" id="whatsapp" href="#">Apply on WhatsApp</a>
+    <a class="cta" href="mailto:hello@lemanetre.com?subject=Membership%20application">Apply by email</a>
   </div>
 
   <p class="fine">Medical assessments and diagnostics are provided by independent licensed professionals. LÉMAN ÊTRE coordinates access and does not provide medical care.</p>
   <p class="foot">lemanetre.com</p>
 </main>
 <script>
-  // Stripe Payment Link for the USD 1,000 deposit. Leave empty to hide the deposit button.
-  var DEPOSIT_LINK = "https://buy.stripe.com/4gM3cwcPfah97KegQo8IU00";
   var WHATSAPP = "41766790199";
   var msg = "Hello Vanessa, I would like to apply for membership of Léman Être.";
   document.getElementById("whatsapp").href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg);
-  if (DEPOSIT_LINK) {
-    var d = document.getElementById("deposit"), step = document.getElementById("deposit-step");
-    document.getElementById("deposit-go").href = DEPOSIT_LINK;
-    d.hidden = false;
-    d.addEventListener("click", function (e) {
-      e.preventDefault();
-      step.hidden = false; d.hidden = true;
-      step.scrollIntoView({ behavior: "smooth", block: "center" });
-    });
-  }
 </script>
 </body></html>
