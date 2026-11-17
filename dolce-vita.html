@@ -86,6 +86,40 @@
     .hero-text h1 em { font-style: italic; }
     .hero-text .where { font-size: 20px; font-style: italic; color: var(--muted); }
 
+    figure.bleed { margin: 0; padding: 0 24px; }
+    figure.bleed img {
+      display: block; width: 100%; max-width: 880px; margin: 0 auto;
+      filter: grayscale(1) contrast(1.04);
+    }
+    figure.bleed figcaption {
+      text-align: center; padding: 14px 24px 0;
+      font-family: var(--sans); font-weight: 400;
+      font-size: 10px; letter-spacing: .26em; text-transform: uppercase; color: var(--muted);
+    }
+    .pair {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+      max-width: 880px; margin: 0 auto; padding: 0 24px;
+    }
+    .pair figure { margin: 0; }
+    .pair img {
+      display: block; width: 100%; height: 100%;
+      aspect-ratio: 3 / 4; object-fit: cover;
+      filter: grayscale(1) contrast(1.04);
+    }
+    @media (max-width: 640px) { .pair { grid-template-columns: 1fr; } }
+    figure.bleed img, .pair img { transition: filter .9s ease; }
+    @media (hover: hover) {
+      figure.bleed img:hover, .pair img:hover {
+        filter: grayscale(.12) sepia(.24) saturate(.82) hue-rotate(-6deg) contrast(1.02) brightness(1.02);
+      }
+    }
+    figure.bleed img.in-colour, .pair img.in-colour {
+      filter: grayscale(.12) sepia(.24) saturate(.82) hue-rotate(-6deg) contrast(1.02) brightness(1.02);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      figure.bleed img, .pair img { transition: none; }
+    }
+
     section { padding: 96px 0; }
 
     .manifesto p { margin: 0 0 1.5em; }
@@ -174,9 +208,14 @@
 <div class="hero-text">
   <span class="kicker">Sorrento Coast · 1 – 4 October 2027 · By invitation</span>
   <h1>The Dolce <em>Vita</em></h1>
-  <p class="where">A private Italian escape on the Sorrento coast — three nights of nature, flavour and the Mediterranean lifestyle.<br>Eight to ten guests, chosen with care.</p>
+  <p class="where">A private Italian escape on the Sorrento coast — three nights of nature, flavour and the Mediterranean lifestyle.<br>Ten places only, by invitation.</p>
   <p style="margin-top:30px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLScOq6N0_KLJY4X93ELOd3GLildiaQystzO9WAIp-T0NW-0d9Q/viewform" target="_blank" rel="noopener" style="font-family:var(--sans); font-size:11px; letter-spacing:.28em; text-indent:.28em; text-transform:uppercase; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--ink); padding-bottom:5px;">Reserve your place →</a></p>
 </div>
+
+<figure class="bleed">
+  <img src="/dolce_hero.jpg" alt="A private boat along the Capri coastline, the Faraglioni rocks beyond">
+  <figcaption>A day at sea · the Capri coast</figcaption>
+</figure>
 
 <section class="manifesto">
   <div class="col">
@@ -187,6 +226,11 @@
     <p>Hosted and curated by LÉMAN ÊTRE, in the register all gatherings of the House keep: beautiful, considered, and entirely among friends.</p>
   </div>
 </section>
+
+<div class="pair">
+  <figure><img src="/dolce_villa.jpg" loading="lazy" alt="The stone villa above the garden, in the Mediterranean greenery"></figure>
+  <figure><img src="/dolce_garden.jpg" loading="lazy" alt="The garden at dusk, tables laid under the lemon trees"></figure>
+</div>
 
 <section>
   <div class="col">
@@ -235,6 +279,16 @@
   </div>
 </section>
 
+<figure class="bleed">
+  <img src="/dolce_dinner.jpg" loading="lazy" alt="A long dinner under the pergola at night, the whole table together">
+  <figcaption>The table, where each evening ends</figcaption>
+</figure>
+
+<div class="pair">
+  <figure><img src="/dolce_limoncello.jpg" loading="lazy" alt="Peeling lemons for limoncello on a wooden table"></figure>
+  <figure><img src="/dolce_cooking.jpg" loading="lazy" alt="Fresh gnocchi shaped by hand, the art of Italian cooking"></figure>
+</div>
+
 <section>
   <div class="col">
     <span class="kicker">What makes it distinct</span>
@@ -260,11 +314,21 @@
   </div>
 </section>
 
+<div class="pair">
+  <figure><img src="/dolce_sea.jpg" loading="lazy" alt="A couple on the bow of a boat, framed by a sea cave off Capri"></figure>
+  <figure><img src="/dolce_positano.jpg" loading="lazy" alt="Positano rising from the water, seen from the sea"></figure>
+</div>
+
+<figure class="bleed" style="margin-top: 20px;">
+  <img src="/dolce_pompeii.jpg" loading="lazy" alt="The forum of ancient Pompeii beneath Mount Vesuvius">
+  <figcaption>Optional · Pompeii &amp; Vesuvius</figcaption>
+</figure>
+
 <section class="invite">
   <div class="col">
     <span class="kicker">The invitation</span>
-    <h2>Eight to ten places</h2>
-    <p>1 – 4 October 2027 · three nights. The Dolce Vita is offered by invitation, as all gatherings of the House are. Tell us a little about yourself and what draws you — places are confirmed personally, in the order conversations conclude.</p>
+    <h2>Ten places only</h2>
+    <p>1 – 4 October 2027 · three nights · ten places only. The Dolce Vita is offered by invitation, as all gatherings of the House are. Tell us a little about yourself and what draws you — places are confirmed personally, in the order conversations conclude.</p>
 
     <ul style="list-style:none; margin:0 auto 30px; padding:0; max-width:470px; text-align:left; font-size:17px;">
       <li style="padding:9px 0; border-bottom:1px solid var(--hairline);">Three nights at a private villa on the Sorrento coast</li>
@@ -273,7 +337,8 @@
       <li style="padding:9px 0; border-bottom:1px solid var(--hairline);">A private yacht day to Capri and Positano</li>
       <li style="padding:9px 0;">The Amalfi Coast — with Pompeii and Mount Vesuvius an optional journey</li>
     </ul>
-    <p style="font-size:14px; font-style:italic; color:var(--muted); margin:0 0 42px;">Flights and personal expenses are not included. Final details, inclusions and booking terms are confirmed before your place is secured.</p>
+    <p style="font-size:14px; font-style:italic; color:var(--muted); margin:0 0 20px;">Flights and personal expenses are not included. Final details, inclusions and booking terms are confirmed before your place is secured.</p>
+    <p style="font-size:15px; margin:0 0 42px;">Joined a LÉMAN ÊTRE gathering before? You're offered a <em style="font-style:italic;">returning-guest rate</em> — mention it when you reserve.</p>
 
     <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScOq6N0_KLJY4X93ELOd3GLildiaQystzO9WAIp-T0NW-0d9Q/viewform" target="_blank" rel="noopener">Reserve your place</a>
     <p class="note">No payment now — share a few details and we'll be in touch to confirm. Prefer to write? <a href="mailto:hello@lemanetre.com?subject=Reserve%20—%20The%20Dolce%20Vita%2C%20Sorrento%2C%201–4%20October%202027" style="color: inherit;">hello@lemanetre.com</a></p>
@@ -284,5 +349,16 @@
   <div class="brandmark"><a href="/">Léman Être</a></div>
   <p>Elevated leisure. An international house of gatherings.</p>
 </footer>
+
+<script>
+  (function () {
+    // Images are grayscale and bloom into one shared warm grade on hover;
+    // the class toggle is the fallback for browsers that don't persist CSS :hover (touch).
+    document.querySelectorAll('figure.bleed img, .pair img').forEach(function (m) {
+      m.addEventListener('pointerenter', function () { m.classList.add('in-colour'); });
+      m.addEventListener('pointerleave', function () { m.classList.remove('in-colour'); });
+    });
+  })();
+</script>
 
 </body></html>
