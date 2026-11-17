@@ -42,6 +42,8 @@
     .cta.primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
     .cta:hover { background: var(--ink); color: var(--paper); }
     .cta.primary:hover { background: #222; }
+    .reveal-step { margin-top: 1.4rem; }
+    .reveal-step .actions { margin-top: 1.2rem; }
     .deposit-note { font-family: var(--serif); font-size: .98rem; line-height: 1.55; color: var(--muted);
       margin: .9rem auto 0; max-width: 40ch; }
     .fine { letter-spacing: .02em; text-transform: none; font-size: .7rem; line-height: 1.6;
@@ -83,7 +85,10 @@
     <a class="cta" id="whatsapp" href="#">Apply on WhatsApp</a>
     <a class="cta" href="mailto:hello@lemanetre.com?subject=Membership%20application">Write to the House</a>
   </div>
-  <p class="deposit-note" id="deposit-note" hidden>A deposit of USD 1,000 holds your place while we review your application. It is refunded in full if your application is not accepted, and credited to your first year if it is.</p>
+  <div class="reveal-step" id="deposit-step" hidden>
+    <p class="deposit-note">A deposit of USD 1,000 holds your place while we review your application. It is refunded in full if your application is not accepted, and credited to your first year if it is.</p>
+    <div class="actions"><a class="cta primary" id="deposit-go" href="#">Continue</a></div>
+  </div>
 
   <p class="fine">Medical assessments and diagnostics are provided by independent licensed professionals. LÉMAN ÊTRE coordinates access and does not provide medical care.</p>
   <p class="foot">lemanetre.com</p>
@@ -95,9 +100,14 @@
   var msg = "Hello Vanessa, I would like to apply for membership of Léman Être.";
   document.getElementById("whatsapp").href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg);
   if (DEPOSIT_LINK) {
-    var d = document.getElementById("deposit");
-    d.href = DEPOSIT_LINK; d.hidden = false;
-    document.getElementById("deposit-note").hidden = false;
+    var d = document.getElementById("deposit"), step = document.getElementById("deposit-step");
+    document.getElementById("deposit-go").href = DEPOSIT_LINK;
+    d.hidden = false;
+    d.addEventListener("click", function (e) {
+      e.preventDefault();
+      step.hidden = false; d.hidden = true;
+      step.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
   }
 </script>
 </body></html>
